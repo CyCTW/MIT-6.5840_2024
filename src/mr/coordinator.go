@@ -6,7 +6,6 @@ import (
 	"net/http"
 	"net/rpc"
 	"os"
-	"sync"
 	"sync/atomic"
 	"time"
 )
@@ -32,15 +31,15 @@ type ReduceTask struct {
 
 type Coordinator struct {
 	// Your definitions here.
-	map_unprocessed_queue    *Queue[*MapTask]
-	map_task_finished        map[int]*MapTask // Record which map task is finished.
-	map_finish_count         *atomic.Int32
-	reduce_unprocessed_queue *Queue[*ReduceTask]
-	reduce_task_finished     map[int]*ReduceTask // Record which map task is finished.
-	reduce_finish_count      *atomic.Int32       // Count reduce finish
-	is_map_finished          *atomic.Bool        // Check if it's map phase or reduce phase
-	all_finish               *atomic.Bool        // Check if all phase finished
-	mtx                      sync.Mutex          // Lock for accessing queue
+	map_unprocessed_chan    chan *MapTask
+	map_task_finished       map[int]*MapTask // Record which map task is finished.
+	map_finish_count        *atomic.Int32
+	reduce_unprocessed_chan chan *ReduceTask
+	reduce_task_finished    map[int]*ReduceTask // Record which map task is finished.
+	reduce_finish_count     *atomic.Int32       // Count reduce finish
+	is_map_finished         *atomic.Bool        // Check if it's map phase or reduce phase
+	all_finish              *atomic.Bool        // Check if all phase finished
+	// mtx                     sync.Mutex          // Lock for accessing queue
 }
 
 // RPC handler that worker.go call for a job (map or reduce)
@@ -53,9 +52,7 @@ func (c *Coordinator) AskForJob(args *AskForJobArgs, reply *AskForJobReply) erro
 	if !c.is_map_finished.Load() {
 
 		// * Atomic accessed queue
-		c.mtx.Lock()
-		maptask, ok := c.map_unprocessed_queue.Dequeue()
-		c.mtx.Unlock()
+		maptask, ok := <-c.map_unprocessed_chan
 
 		// task may has finished. Check here
 		if ok && maptask.Status.Load() != TaskFinish {
@@ -75,9 +72,7 @@ func (c *Coordinator) AskForJob(args *AskForJobArgs, reply *AskForJobReply) erro
 
 	} else {
 		// reduce task
-		c.mtx.Lock()
-		reducetask, ok := c.reduce_unprocessed_queue.Dequeue()
-		c.mtx.Unlock()
+		reducetask, ok := <-c.reduce_unprocessed_chan
 
 		if ok && reducetask.Status.Load() != TaskFinish {
 			// Write reply
@@ -171,24 +166,30 @@ func (c *Coordinator) Done() bool {
 func MakeCoordinator(files []string, nReduce int) *Coordinator {
 	map_mp := make(map[int]*MapTask)
 	reduce_mp := make(map[int]*ReduceTask)
-	mp_queue := NewQueue[*MapTask]()
-	red_queue := NewQueue[*ReduceTask]()
+	// mp_queue := NewQueue[*MapTask]()
+	// red_queue := NewQueue[*ReduceTask]()
+	nMapper := len(files)
+	mp_chan := make(chan *MapTask, nMapper+5)
+	reduce_chan := make(chan *ReduceTask, nReduce+5)
 
 	for i, file := range files {
 		task := MapTask{&atomic.Int32{}, SafeTime{}, file, i}
 		map_mp[i] = &task
 
-		mp_queue.Enqueue(&task)
+		mp_chan <- &task
+		// mp_queue.Enqueue(&task)
 	}
 
 	for i := 0; i < nReduce; i++ {
 		task := ReduceTask{&atomic.Int32{}, SafeTime{}, i}
 		reduce_mp[i] = &task
 
-		red_queue.Enqueue(&task)
+		reduce_chan <- &task
+		// red_queue.Enqueue(&task)
 	}
 
-	c := Coordinator{mp_queue, map_mp, &atomic.Int32{}, red_queue, reduce_mp, &atomic.Int32{}, &atomic.Bool{}, &atomic.Bool{}, sync.Mutex{}}
+	// c := Coordinator{mp_queue, map_mp, &atomic.Int32{}, red_queue, reduce_mp, &atomic.Int32{}, &atomic.Bool{}, &atomic.Bool{}, sync.Mutex{}}
+	c := Coordinator{mp_chan, map_mp, &atomic.Int32{}, reduce_chan, reduce_mp, &atomic.Int32{}, &atomic.Bool{}, &atomic.Bool{}}
 	log.Printf("Total %d nmap, %d nreduce", len(map_mp), len(reduce_mp))
 	// Your code here.
 	c.server()
@@ -209,9 +210,7 @@ func MakeCoordinator(files []string, nReduce int) *Coordinator {
 
 					if change_successfully {
 						// If not change successfully, means task is finished between the if branch and cas operation.
-						c.mtx.Lock()
-						c.map_unprocessed_queue.Enqueue(task)
-						c.mtx.Unlock()
+						c.map_unprocessed_chan <- task
 					}
 
 				}
@@ -220,9 +219,7 @@ func MakeCoordinator(files []string, nReduce int) *Coordinator {
 			for _, task := range c.reduce_task_finished {
 				if now_tick.Sub(task.Start_tick.Get()) > timeout_bound && task.Status.Load() == TaskStart {
 					task.Status.Store(TaskInit)
-					c.mtx.Lock()
-					c.reduce_unprocessed_queue.Enqueue(task)
-					c.mtx.Unlock()
+					c.reduce_unprocessed_chan <- task
 				}
 			}
 		}

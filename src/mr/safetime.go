@@ -1,23 +1,19 @@
 package mr
 
 import (
-	"sync"
+	"sync/atomic"
 	"time"
 )
 
 type SafeTime struct {
-	mu    sync.Mutex
-	value time.Time
+	tick atomic.Int64
 }
 
 func (st *SafeTime) Set(t time.Time) {
-	st.mu.Lock()
-	st.value = t
-	st.mu.Unlock()
+	st.tick.Store(t.Unix())
 }
 
 func (st *SafeTime) Get() time.Time {
-	st.mu.Lock()
-	defer st.mu.Unlock()
-	return st.value
+	tick := st.tick.Load()
+	return time.Unix(tick, 0)
 }

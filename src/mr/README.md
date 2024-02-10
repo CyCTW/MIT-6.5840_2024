@@ -6,6 +6,43 @@
 
 ## Status
 - Pass all `test-mr.sh` tests.
+- Lock-free implementation.
+
+## Data structures design thoughts
+
+### First thoughts
+- Use a `map` to stored map/reduce jobs status
+  - Key: Id, Value: A struct that stored the job status.
+- Use boolean to record whether map phase finished, and all phase finished.
+- Record the last sent time(time.Time) of a task.
+  - Multiple thread may access the time, so need to think a sync mechanism like lock.
+
+- Problem: With only `map` data structure, some operation may time-consuming
+  1. Coordinator find unprocessed job.
+     - With only map, we need to iterate all value in map, check job status to find which job is unprocessed.
+     - Time complexity: O(n), n == size of map
+  2. It's hard to know whether map phase is finished, or reduce phase is finished.
+     - With only map, need to iterate all value and count finished task
+     - Time complexity: O(n)
+  
+### Further Optimization I
+
+- For problem 1, we can apply another data structure like **Queue** to stored unprocessed jobs.
+  - See a simple queue implementation in `queue.go`
+  - For coordinator, only need to pop a element from queue, and process it.
+  - Time complexity: O(1)
+  - For expired job, need to re-push to the queue for further handling.
+  - Sync:
+    - There may be two thread accessing queue(Enqueue/Deque), so a lock may be needed.
+- For problem 2, we can use a **atomic counter** to record how many task has finished.
+  - The counter should only be increate monotonically.
+  - Need to be careful that task we think is expired, can't count twice.
+
+### Further Optimization II
+- For problem 1, queue is good to go. But is there any approach that can be lock-free?
+  - Actually, go already provide a builtin mechanism that's similar to SPSC queue between goroutine/thread. i.e. `channel`
+  - Then, we can use `channel` to replace queue, and do lock-free.
+- For time field, actually we only need the unix timestamp, and we can stored it as atomic.Int64.
 
 ## Developing Notes:
 Problem: How does reducer works? 
