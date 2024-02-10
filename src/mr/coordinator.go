@@ -1,33 +1,150 @@
 package mr
 
-import "log"
-import "net"
-import "os"
-import "net/rpc"
-import "net/http"
+import (
+	"log"
+	"net"
+	"net/http"
+	"net/rpc"
+	"os"
+	"sync"
+	"sync/atomic"
+	"time"
+)
 
+const (
+	TaskInit int32 = iota
+	TaskStart
+	TaskFinish
+)
+
+type MapTask struct {
+	Status     *atomic.Int32 // status, default is init
+	Start_tick SafeTime      // start tick time
+	Filename   string
+	Id         int
+}
+
+type ReduceTask struct {
+	Status     *atomic.Int32
+	Start_tick SafeTime
+	Id         int
+}
 
 type Coordinator struct {
 	// Your definitions here.
+	map_unprocessed_queue    *Queue[*MapTask]
+	map_task_finished        map[int]*MapTask // Record which map task is finished.
+	map_finish_count         *atomic.Int32
+	reduce_unprocessed_queue *Queue[*ReduceTask]
+	reduce_task_finished     map[int]*ReduceTask // Record which map task is finished.
+	reduce_finish_count      *atomic.Int32       // Count reduce finish
+	is_map_finished          *atomic.Bool        // Check if it's map phase or reduce phase
+	all_finish               *atomic.Bool        // Check if all phase finished
+	mtx                      sync.Mutex          // Lock for accessing queue
+}
+
+// RPC handler that worker.go call for a job (map or reduce)
+// Return a not-yet-start job.
+func (c *Coordinator) AskForJob(args *AskForJobArgs, reply *AskForJobReply) error {
+
+	nReduce := len(c.reduce_task_finished)
+	nMapper := len(c.map_task_finished)
+
+	if !c.is_map_finished.Load() {
+
+		// * Atomic accessed queue
+		c.mtx.Lock()
+		maptask, ok := c.map_unprocessed_queue.Dequeue()
+		c.mtx.Unlock()
+
+		// task may has finished. Check here
+		if ok && maptask.Status.Load() != TaskFinish {
+			// Write reply
+			reply.Id = maptask.Id
+			reply.InputFilename = c.map_task_finished[maptask.Id].Filename
+			reply.NReduce = nReduce
+			reply.NMapper = nMapper
+			reply.WorkType = MapperType
+
+			// * Record time
+			maptask.Start_tick.Set(time.Now())
+			maptask.Status.Store(TaskStart)
+		} else {
+			reply.Id = -1
+		}
+
+	} else {
+		// reduce task
+		c.mtx.Lock()
+		reducetask, ok := c.reduce_unprocessed_queue.Dequeue()
+		c.mtx.Unlock()
+
+		if ok && reducetask.Status.Load() != TaskFinish {
+			// Write reply
+			reply.Id = reducetask.Id
+			// reply.InputFilename No used here.
+			reply.NReduce = nReduce
+			reply.NMapper = nMapper
+			reply.WorkType = ReducerType
+
+			// * Record time
+			reducetask.Start_tick.Set(time.Now())
+			reducetask.Status.Store(TaskStart)
+		} else {
+			reply.Id = -1
+		}
+
+	}
+	return nil
 
 }
 
-// Your code here -- RPC handlers for the worker to call.
+// RPC handler that worker.go call for completed a job (map or reduce)
+func (c *Coordinator) NotifyCompleted(args *NotifyCompletedArgs, reply *NotifyCompletedReply) error {
+	wid := args.Id
+	wtype := args.WorkType
 
-//
-// an example RPC handler.
-//
-// the RPC argument and reply types are defined in rpc.go.
-//
-func (c *Coordinator) Example(args *ExampleArgs, reply *ExampleReply) error {
-	reply.Y = args.X + 1
+	// * Consider case that same id return twice
+
+	if wtype == MapperType {
+		status := c.map_task_finished[wid].Status.Load()
+
+		if status != TaskFinish {
+			_, ok := c.map_task_finished[wid]
+			if ok == false {
+				log.Fatalf("Key %d not exists", wid)
+			}
+			c.map_task_finished[wid].Status.Store(TaskFinish)
+
+			c.map_finish_count.Add(1)
+			if int(c.map_finish_count.Load()) == len(c.map_task_finished) {
+				c.is_map_finished.Store(true)
+			}
+		}
+	} else if wtype == ReducerType {
+		_, ok := c.reduce_task_finished[wid]
+		if ok == false {
+			log.Fatalf("Key %d not exists", wid)
+		}
+
+		status := c.reduce_task_finished[wid].Status.Load()
+		if status != TaskFinish {
+
+			c.reduce_task_finished[wid].Status.Store(TaskFinish)
+
+			c.reduce_finish_count.Add(1)
+
+			if int(c.reduce_finish_count.Load()) == len(c.reduce_task_finished) {
+				c.all_finish.Store(true)
+			}
+		}
+	} else {
+		log.Fatalf("Type %v not exists", wtype)
+	}
 	return nil
 }
 
-
-//
 // start a thread that listens for RPCs from worker.go
-//
 func (c *Coordinator) server() {
 	rpc.Register(c)
 	rpc.HandleHTTP()
@@ -41,30 +158,75 @@ func (c *Coordinator) server() {
 	go http.Serve(l, nil)
 }
 
-//
 // main/mrcoordinator.go calls Done() periodically to find out
 // if the entire job has finished.
-//
 func (c *Coordinator) Done() bool {
-	ret := false
-
-	// Your code here.
-
-
+	ret := c.all_finish.Load()
 	return ret
 }
 
-//
 // create a Coordinator.
 // main/mrcoordinator.go calls this function.
 // nReduce is the number of reduce tasks to use.
-//
 func MakeCoordinator(files []string, nReduce int) *Coordinator {
-	c := Coordinator{}
+	map_mp := make(map[int]*MapTask)
+	reduce_mp := make(map[int]*ReduceTask)
+	mp_queue := NewQueue[*MapTask]()
+	red_queue := NewQueue[*ReduceTask]()
 
+	for i, file := range files {
+		task := MapTask{&atomic.Int32{}, SafeTime{}, file, i}
+		map_mp[i] = &task
+
+		mp_queue.Enqueue(&task)
+	}
+
+	for i := 0; i < nReduce; i++ {
+		task := ReduceTask{&atomic.Int32{}, SafeTime{}, i}
+		reduce_mp[i] = &task
+
+		red_queue.Enqueue(&task)
+	}
+
+	c := Coordinator{mp_queue, map_mp, &atomic.Int32{}, red_queue, reduce_mp, &atomic.Int32{}, &atomic.Bool{}, &atomic.Bool{}, sync.Mutex{}}
+	log.Printf("Total %d nmap, %d nreduce", len(map_mp), len(reduce_mp))
 	// Your code here.
-
-
 	c.server()
+
+	// periodically check if time expired.
+	go func() {
+		timeout_bound := 10 * time.Second
+		for {
+			time.Sleep(1 * time.Second)
+
+			now_tick := time.Now()
+			for _, task := range c.map_task_finished {
+				if now_tick.Sub(task.Start_tick.Get()) > timeout_bound && task.Status.Load() == TaskStart {
+					// log.Print(now_tick, task.Start_tick, timeout_bound)
+					// log.Printf("Add new map timeout item!, id: %d", task.Id)
+					// Only grap start task
+					change_successfully := task.Status.CompareAndSwap(TaskStart, TaskInit)
+
+					if change_successfully {
+						// If not change successfully, means task is finished between the if branch and cas operation.
+						c.mtx.Lock()
+						c.map_unprocessed_queue.Enqueue(task)
+						c.mtx.Unlock()
+					}
+
+				}
+			}
+
+			for _, task := range c.reduce_task_finished {
+				if now_tick.Sub(task.Start_tick.Get()) > timeout_bound && task.Status.Load() == TaskStart {
+					task.Status.Store(TaskInit)
+					c.mtx.Lock()
+					c.reduce_unprocessed_queue.Enqueue(task)
+					c.mtx.Unlock()
+				}
+			}
+		}
+
+	}()
 	return &c
 }
