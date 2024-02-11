@@ -8,4 +8,6 @@
     - Generated randomly because different clients are hard to sync.
   - Client won't send previous request
     - It's ok for server to record latest client's id operation .
-- 
+## TODO
+- Check map concurrent access by different cid
+- map struct value can't directly modify.
