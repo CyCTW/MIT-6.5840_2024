@@ -447,7 +447,7 @@ func (rf *Raft) ticker() {
 							})
 
 							// try start sending heartbeats goroutine
-							go rf.sendHeartBeats()
+							rf.sendHeartBeats()
 							has_enter = true
 							// Don't break here to gracefully shutdown
 						}
@@ -481,6 +481,20 @@ func (rf *Raft) ticker() {
 }
 
 func (rf *Raft) sendHeartBeats() {
+	for i := range rf.peers {
+		if i == rf.me {
+			continue
+		}
+		reply := AppendEntriesReply{}
+		go func(i int) {
+			rf.sendHeartBeatsRPC(i, &AppendEntriesArgs{rf.currentTerm, rf.me}, &reply)
+			rf.Sync(func() {
+				rf.UpdateTerm(reply.Term)
+			})
+		}(i)
+	}
+}
+func (rf *Raft) startSendHeartBeats() {
 	// send heartbeat periodically if it's leader.
 	// one sec at most 10 times
 	DPrintf("%d Start send heartbeat goroutine", rf.me)
@@ -491,23 +505,11 @@ func (rf *Raft) sendHeartBeats() {
 			role = rf.role
 		})
 		if role != Leader {
-			break
+			continue
 		}
+		rf.sendHeartBeats()
 
 		DPrintf("%d Start send heartbeats\n", rf.me)
-
-		for i := range rf.peers {
-			if i == rf.me {
-				continue
-			}
-			reply := AppendEntriesReply{}
-			go func(i int) {
-				rf.sendHeartBeatsRPC(i, &AppendEntriesArgs{rf.currentTerm, rf.me}, &reply)
-				rf.Sync(func() {
-					rf.UpdateTerm(reply.Term)
-				})
-			}(i)
-		}
 
 		time.Sleep(150 * time.Millisecond)
 	}
@@ -547,6 +549,7 @@ func Make(peers []*labrpc.ClientEnd, me int,
 
 	// start ticker goroutine to start elections
 	go rf.ticker()
+	go rf.startSendHeartBeats()
 
 	return rf
 }
