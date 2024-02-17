@@ -1,0 +1,1452 @@
+2024/02/13 00:04:59 0 Start ticker
+2024/02/13 00:04:59 0 Sleep 591 miliseconds?
+2024/02/13 00:04:59 1 Start ticker
+2024/02/13 00:04:59 1 Sleep 560 miliseconds?
+Test (3A): initial election ...
+2024/02/13 00:04:59 2 Start ticker
+2024/02/13 00:04:59 2 Sleep 547 miliseconds?
+2024/02/13 00:05:00 2 Found timeout, become candidate.
+2024/02/13 00:05:00 2 Sleep 452 miliseconds?
+2024/02/13 00:05:00 2 Send request vote to 0
+2024/02/13 00:05:00 2 Send request vote to 1
+2024/02/13 00:05:00 0 receive requestvote from 2
+2024/02/13 00:05:00 0 Update term to 0
+2024/02/13 00:05:00 2 Recv vote reply from 0. be voted
+2024/02/13 00:05:00 2 Start send heartbeat goroutine
+2024/02/13 00:05:00 2 Start send heartbeats
+2024/02/13 00:05:00 2 Send heartbeat to 1
+2024/02/13 00:05:00 2 Send heartbeat to 0
+2024/02/13 00:05:00 1 receive requestvote from 2
+2024/02/13 00:05:00 1 Update term to 0
+2024/02/13 00:05:00 0 receive heartbeat term 1 from 2
+2024/02/13 00:05:00 2 Recv vote reply from 1. be voted
+2024/02/13 00:05:00 1 receive heartbeat term 1 from 2
+2024/02/13 00:05:00 1 Sleep 441 miliseconds?
+2024/02/13 00:05:00 0 Sleep 421 miliseconds?
+2024/02/13 00:05:00 2 Start send heartbeats
+2024/02/13 00:05:00 2 Send heartbeat to 1
+2024/02/13 00:05:00 2 Send heartbeat to 0
+2024/02/13 00:05:00 1 receive heartbeat term 1 from 2
+2024/02/13 00:05:00 0 receive heartbeat term 1 from 2
+2024/02/13 00:05:00 2 Start send heartbeats
+2024/02/13 00:05:00 2 Send heartbeat to 1
+2024/02/13 00:05:00 2 Send heartbeat to 0
+2024/02/13 00:05:00 0 receive heartbeat term 1 from 2
+2024/02/13 00:05:00 1 receive heartbeat term 1 from 2
+2024/02/13 00:05:00 2 Sleep 541 miliseconds?
+2024/02/13 00:05:00 2 Start send heartbeats
+2024/02/13 00:05:00 2 Send heartbeat to 1
+2024/02/13 00:05:00 2 Send heartbeat to 0
+2024/02/13 00:05:00 1 receive heartbeat term 1 from 2
+2024/02/13 00:05:00 1 Sleep 529 miliseconds?
+2024/02/13 00:05:00 0 receive heartbeat term 1 from 2
+2024/02/13 00:05:00 0 Sleep 452 miliseconds?
+2024/02/13 00:05:00 2 Start send heartbeats
+2024/02/13 00:05:00 2 Send heartbeat to 1
+2024/02/13 00:05:00 2 Send heartbeat to 0
+2024/02/13 00:05:00 1 receive heartbeat term 1 from 2
+2024/02/13 00:05:00 0 receive heartbeat term 1 from 2
+2024/02/13 00:05:00 2 Start send heartbeats
+2024/02/13 00:05:00 2 Send heartbeat to 0
+2024/02/13 00:05:00 2 Send heartbeat to 1
+2024/02/13 00:05:00 0 receive heartbeat term 1 from 2
+2024/02/13 00:05:00 1 receive heartbeat term 1 from 2
+2024/02/13 00:05:01 2 Start send heartbeats
+2024/02/13 00:05:01 2 Send heartbeat to 1
+2024/02/13 00:05:01 2 Send heartbeat to 0
+2024/02/13 00:05:01 1 receive heartbeat term 1 from 2
+2024/02/13 00:05:01 0 receive heartbeat term 1 from 2
+2024/02/13 00:05:01 0 Sleep 572 miliseconds?
+2024/02/13 00:05:01 1 Sleep 385 miliseconds?
+2024/02/13 00:05:01 2 Sleep 532 miliseconds?
+2024/02/13 00:05:01 2 Start send heartbeats
+2024/02/13 00:05:01 2 Send heartbeat to 1
+2024/02/13 00:05:01 2 Send heartbeat to 0
+2024/02/13 00:05:01 1 receive heartbeat term 1 from 2
+2024/02/13 00:05:01 0 receive heartbeat term 1 from 2
+2024/02/13 00:05:01 2 Start send heartbeats
+2024/02/13 00:05:01 2 Send heartbeat to 0
+2024/02/13 00:05:01 2 Send heartbeat to 1
+2024/02/13 00:05:01 0 receive heartbeat term 1 from 2
+2024/02/13 00:05:01 1 receive heartbeat term 1 from 2
+2024/02/13 00:05:01 2 Start send heartbeats
+2024/02/13 00:05:01 2 Send heartbeat to 1
+2024/02/13 00:05:01 2 Send heartbeat to 0
+2024/02/13 00:05:01 1 receive heartbeat term 1 from 2
+2024/02/13 00:05:01 0 receive heartbeat term 1 from 2
+2024/02/13 00:05:01 1 Sleep 450 miliseconds?
+2024/02/13 00:05:01 0 Sleep 409 miliseconds?
+2024/02/13 00:05:01 2 Start send heartbeats
+2024/02/13 00:05:01 2 Send heartbeat to 1
+2024/02/13 00:05:01 2 Send heartbeat to 0
+2024/02/13 00:05:01 0 receive heartbeat term 1 from 2
+2024/02/13 00:05:01 1 receive heartbeat term 1 from 2
+2024/02/13 00:05:01 2 Sleep 596 miliseconds?
+2024/02/13 00:05:01 2 Start send heartbeats
+2024/02/13 00:05:01 2 Send heartbeat to 1
+2024/02/13 00:05:01 2 Send heartbeat to 0
+2024/02/13 00:05:01 0 receive heartbeat term 1 from 2
+2024/02/13 00:05:01 1 receive heartbeat term 1 from 2
+2024/02/13 00:05:02 2 Start send heartbeats
+2024/02/13 00:05:02 2 Send heartbeat to 1
+2024/02/13 00:05:02 2 Send heartbeat to 0
+2024/02/13 00:05:02 0 receive heartbeat term 1 from 2
+2024/02/13 00:05:02 1 receive heartbeat term 1 from 2
+2024/02/13 00:05:02 1 Sleep 517 miliseconds?
+2024/02/13 00:05:02 0 Sleep 478 miliseconds?
+2024/02/13 00:05:02 2 Start send heartbeats
+2024/02/13 00:05:02 2 Send heartbeat to 1
+2024/02/13 00:05:02 2 Send heartbeat to 0
+2024/02/13 00:05:02 1 receive heartbeat term 1 from 2
+2024/02/13 00:05:02 0 receive heartbeat term 1 from 2
+2024/02/13 00:05:02 2 Start send heartbeats
+2024/02/13 00:05:02 2 Send heartbeat to 1
+2024/02/13 00:05:02 2 Send heartbeat to 0
+2024/02/13 00:05:02 1 receive heartbeat term 1 from 2
+2024/02/13 00:05:02 0 receive heartbeat term 1 from 2
+2024/02/13 00:05:02 2 Sleep 510 miliseconds?
+2024/02/13 00:05:02 2 Start send heartbeats
+2024/02/13 00:05:02 2 Send heartbeat to 1
+2024/02/13 00:05:02 2 Send heartbeat to 0
+2024/02/13 00:05:02 1 receive heartbeat term 1 from 2
+2024/02/13 00:05:02 0 receive heartbeat term 1 from 2
+2024/02/13 00:05:02 1 Sleep 384 miliseconds?
+2024/02/13 00:05:02 0 Sleep 403 miliseconds?
+2024/02/13 00:05:02 2 Start send heartbeats
+2024/02/13 00:05:02 2 Send heartbeat to 1
+2024/02/13 00:05:02 2 Send heartbeat to 0
+2024/02/13 00:05:02 1 receive heartbeat term 1 from 2
+2024/02/13 00:05:02 0 receive heartbeat term 1 from 2
+2024/02/13 00:05:02 2 Start send heartbeats
+2024/02/13 00:05:02 2 Send heartbeat to 0
+2024/02/13 00:05:02 2 Send heartbeat to 1
+2024/02/13 00:05:02 0 receive heartbeat term 1 from 2
+2024/02/13 00:05:02 1 receive heartbeat term 1 from 2
+2024/02/13 00:05:02 2 Sleep 588 miliseconds?
+2024/02/13 00:05:02 2 Start send heartbeats
+2024/02/13 00:05:02 2 Send heartbeat to 1
+2024/02/13 00:05:02 2 Send heartbeat to 0
+2024/02/13 00:05:02 0 receive heartbeat term 1 from 2
+2024/02/13 00:05:02 1 receive heartbeat term 1 from 2
+2024/02/13 00:05:02 1 Sleep 503 miliseconds?
+2024/02/13 00:05:02 0 Sleep 382 miliseconds?
+2024/02/13 00:05:03 2 Start send heartbeats
+2024/02/13 00:05:03 2 Send heartbeat to 1
+2024/02/13 00:05:03 2 Send heartbeat to 0
+2024/02/13 00:05:03 1 receive heartbeat term 1 from 2
+2024/02/13 00:05:03 0 receive heartbeat term 1 from 2
+  ... Passed --   3.5  3   42    5202    0
+2024/02/13 00:05:03 0 Start ticker
+Test (3A): election after network failure ...
+2024/02/13 00:05:03 2 Start ticker
+2024/02/13 00:05:03 2 Sleep 598 miliseconds?
+2024/02/13 00:05:03 0 Sleep 525 miliseconds?
+2024/02/13 00:05:03 1 Start ticker
+2024/02/13 00:05:03 1 Sleep 502 miliseconds?
+2024/02/13 00:05:03 2 Exit send heartbeat goroutine
+2024/02/13 00:05:03 1 Found timeout, become candidate.
+2024/02/13 00:05:03 1 Sleep 474 miliseconds?
+2024/02/13 00:05:03 1 Send request vote to 0
+2024/02/13 00:05:03 0 receive requestvote from 1
+2024/02/13 00:05:03 0 Update term to 0
+2024/02/13 00:05:03 1 Send request vote to 2
+2024/02/13 00:05:03 1 Recv vote reply from 0. be voted
+2024/02/13 00:05:03 1 Start send heartbeat goroutine
+2024/02/13 00:05:03 1 Start send heartbeats
+2024/02/13 00:05:03 2 receive requestvote from 1
+2024/02/13 00:05:03 1 Send heartbeat to 0
+2024/02/13 00:05:03 0 receive heartbeat term 1 from 1
+2024/02/13 00:05:03 2 Update term to 0
+2024/02/13 00:05:03 1 Send heartbeat to 2
+2024/02/13 00:05:03 1 Recv vote reply from 2. be voted
+2024/02/13 00:05:03 2 receive heartbeat term 1 from 1
+2024/02/13 00:05:03 0 Sleep 520 miliseconds?
+2024/02/13 00:05:03 2 Sleep 503 miliseconds?
+2024/02/13 00:05:03 1 Start send heartbeats
+2024/02/13 00:05:03 1 Send heartbeat to 2
+2024/02/13 00:05:03 1 Send heartbeat to 0
+2024/02/13 00:05:03 1 Start send heartbeats
+2024/02/13 00:05:03 1 Send heartbeat to 2
+2024/02/13 00:05:03 1 Send heartbeat to 0
+2024/02/13 00:05:04 1 Start send heartbeats
+2024/02/13 00:05:04 1 Send heartbeat to 2
+2024/02/13 00:05:04 1 Send heartbeat to 0
+2024/02/13 00:05:04 1 Sleep 547 miliseconds?
+2024/02/13 00:05:04 0 Found timeout, become candidate.
+2024/02/13 00:05:04 0 Sleep 549 miliseconds?
+2024/02/13 00:05:04 0 Send request vote to 1
+2024/02/13 00:05:04 0 Send request vote to 2
+2024/02/13 00:05:04 2 receive requestvote from 0
+2024/02/13 00:05:04 2 Update term to 1
+2024/02/13 00:05:04 0 Recv vote reply from 2. be voted
+2024/02/13 00:05:04 0 Start send heartbeat goroutine
+2024/02/13 00:05:04 0 Start send heartbeats
+2024/02/13 00:05:04 0 Send heartbeat to 2
+2024/02/13 00:05:04 2 receive heartbeat term 2 from 0
+2024/02/13 00:05:04 0 Send heartbeat to 1
+2024/02/13 00:05:04 2 Sleep 405 miliseconds?
+2024/02/13 00:05:04 1 Start send heartbeats
+2024/02/13 00:05:04 1 Send heartbeat to 2
+2024/02/13 00:05:04 1 Send heartbeat to 0
+2024/02/13 00:05:04 0 Start send heartbeats
+2024/02/13 00:05:04 0 Send heartbeat to 2
+2024/02/13 00:05:04 0 Send heartbeat to 1
+2024/02/13 00:05:04 2 receive heartbeat term 2 from 0
+2024/02/13 00:05:04 1 Start send heartbeats
+2024/02/13 00:05:04 1 Send heartbeat to 2
+2024/02/13 00:05:04 1 Send heartbeat to 0
+2024/02/13 00:05:04 0 Start send heartbeats
+2024/02/13 00:05:04 0 Send heartbeat to 2
+2024/02/13 00:05:04 0 Send heartbeat to 1
+2024/02/13 00:05:04 2 receive heartbeat term 2 from 0
+2024/02/13 00:05:04 1 Start send heartbeats
+2024/02/13 00:05:04 1 Send heartbeat to 2
+2024/02/13 00:05:04 1 Send heartbeat to 0
+2024/02/13 00:05:04 0 Start send heartbeats
+2024/02/13 00:05:04 0 Send heartbeat to 2
+2024/02/13 00:05:04 0 Send heartbeat to 1
+2024/02/13 00:05:04 2 receive heartbeat term 2 from 0
+2024/02/13 00:05:04 1 receive heartbeat term 2 from 0
+2024/02/13 00:05:04 2 Sleep 460 miliseconds?
+2024/02/13 00:05:04 1 Sleep 572 miliseconds?
+2024/02/13 00:05:04 1 Start send heartbeats
+2024/02/13 00:05:04 1 Send heartbeat to 0
+2024/02/13 00:05:04 1 Send heartbeat to 2
+2024/02/13 00:05:04 0 receive heartbeat term 1 from 1
+2024/02/13 00:05:04 2 receive heartbeat term 1 from 1
+2024/02/13 00:05:04 1 Update term to 1
+2024/02/13 00:05:04 0 Sleep 550 miliseconds?
+2024/02/13 00:05:04 0 Start send heartbeats
+2024/02/13 00:05:04 0 Send heartbeat to 2
+2024/02/13 00:05:04 0 Send heartbeat to 1
+2024/02/13 00:05:04 2 receive heartbeat term 2 from 0
+2024/02/13 00:05:04 1 receive heartbeat term 2 from 0
+2024/02/13 00:05:04 0 Recv vote error. retry
+2024/02/13 00:05:04 1 Exit send heartbeat goroutine
+2024/02/13 00:05:04 0 Start send heartbeats
+2024/02/13 00:05:04 0 Send heartbeat to 2
+2024/02/13 00:05:04 0 Send heartbeat to 1
+2024/02/13 00:05:04 2 receive heartbeat term 2 from 0
+2024/02/13 00:05:04 1 receive heartbeat term 2 from 0
+2024/02/13 00:05:05 0 Start send heartbeats
+2024/02/13 00:05:05 0 Send heartbeat to 2
+2024/02/13 00:05:05 0 Send heartbeat to 1
+2024/02/13 00:05:05 2 receive heartbeat term 2 from 0
+2024/02/13 00:05:05 1 receive heartbeat term 2 from 0
+2024/02/13 00:05:05 2 Sleep 553 miliseconds?
+2024/02/13 00:05:05 1 Sleep 405 miliseconds?
+2024/02/13 00:05:05 0 Start send heartbeats
+2024/02/13 00:05:05 0 Send heartbeat to 2
+2024/02/13 00:05:05 0 Send heartbeat to 1
+2024/02/13 00:05:05 0 Sleep 583 miliseconds?
+2024/02/13 00:05:05 0 Start send heartbeats
+2024/02/13 00:05:05 0 Send heartbeat to 1
+2024/02/13 00:05:05 0 Send heartbeat to 2
+2024/02/13 00:05:05 0 Start send heartbeats
+2024/02/13 00:05:05 0 Send heartbeat to 2
+2024/02/13 00:05:05 0 Send heartbeat to 1
+2024/02/13 00:05:05 1 Found timeout, become candidate.
+2024/02/13 00:05:05 1 Sleep 480 miliseconds?
+2024/02/13 00:05:05 1 Send request vote to 0
+2024/02/13 00:05:05 1 Send request vote to 2
+2024/02/13 00:05:05 2 Found timeout, become candidate.
+2024/02/13 00:05:05 2 Sleep 483 miliseconds?
+2024/02/13 00:05:05 2 Send request vote to 0
+2024/02/13 00:05:05 2 Send request vote to 1
+2024/02/13 00:05:05 0 Start send heartbeats
+2024/02/13 00:05:05 0 Send heartbeat to 2
+2024/02/13 00:05:05 0 Send heartbeat to 1
+2024/02/13 00:05:05 0 Start send heartbeats
+2024/02/13 00:05:05 0 Send heartbeat to 2
+2024/02/13 00:05:05 0 Send heartbeat to 1
+2024/02/13 00:05:05 0 Sleep 527 miliseconds?
+2024/02/13 00:05:06 0 Start send heartbeats
+2024/02/13 00:05:06 0 Send heartbeat to 2
+2024/02/13 00:05:06 0 Send heartbeat to 1
+2024/02/13 00:05:06 1 Found timeout, become candidate.
+2024/02/13 00:05:06 1 Sleep 513 miliseconds?
+2024/02/13 00:05:06 1 Send request vote to 0
+2024/02/13 00:05:06 1 Send request vote to 2
+2024/02/13 00:05:06 2 Found timeout, become candidate.
+2024/02/13 00:05:06 2 Sleep 506 miliseconds?
+2024/02/13 00:05:06 2 Send request vote to 0
+2024/02/13 00:05:06 2 Send request vote to 1
+2024/02/13 00:05:06 0 Start send heartbeats
+2024/02/13 00:05:06 0 Send heartbeat to 2
+2024/02/13 00:05:06 0 Send heartbeat to 1
+2024/02/13 00:05:06 0 Start send heartbeats
+2024/02/13 00:05:06 0 Send heartbeat to 2
+2024/02/13 00:05:06 0 Send heartbeat to 1
+2024/02/13 00:05:06 0 Sleep 573 miliseconds?
+2024/02/13 00:05:06 0 Start send heartbeats
+2024/02/13 00:05:06 0 Send heartbeat to 2
+2024/02/13 00:05:06 0 Send heartbeat to 1
+2024/02/13 00:05:06 0 Start send heartbeats
+2024/02/13 00:05:06 0 Send heartbeat to 2
+2024/02/13 00:05:06 0 Send heartbeat to 1
+2024/02/13 00:05:06 1 Found timeout, become candidate.
+2024/02/13 00:05:06 1 Send request vote to 0
+2024/02/13 00:05:06 1 Send request vote to 2
+2024/02/13 00:05:06 1 Sleep 464 miliseconds?
+2024/02/13 00:05:06 2 Found timeout, become candidate.
+2024/02/13 00:05:06 2 Sleep 490 miliseconds?
+2024/02/13 00:05:06 2 Send request vote to 1
+2024/02/13 00:05:06 2 Send request vote to 0
+2024/02/13 00:05:06 0 Start send heartbeats
+2024/02/13 00:05:06 0 Send heartbeat to 2
+2024/02/13 00:05:06 0 Send heartbeat to 1
+2024/02/13 00:05:06 0 Start send heartbeats
+2024/02/13 00:05:06 0 Send heartbeat to 2
+2024/02/13 00:05:06 0 Send heartbeat to 1
+2024/02/13 00:05:06 0 Sleep 596 miliseconds?
+2024/02/13 00:05:07 0 Start send heartbeats
+2024/02/13 00:05:07 0 Send heartbeat to 2
+2024/02/13 00:05:07 0 Send heartbeat to 1
+2024/02/13 00:05:07 1 Found timeout, become candidate.
+2024/02/13 00:05:07 1 Sleep 547 miliseconds?
+2024/02/13 00:05:07 1 Send request vote to 2
+2024/02/13 00:05:07 1 Send request vote to 0
+2024/02/13 00:05:07 2 receive requestvote from 1
+2024/02/13 00:05:07 2 Update term to 5
+2024/02/13 00:05:07 1 Recv vote reply from 2. be voted
+2024/02/13 00:05:07 1 Start send heartbeat goroutine
+2024/02/13 00:05:07 1 Start send heartbeats
+2024/02/13 00:05:07 1 Send heartbeat to 2
+2024/02/13 00:05:07 1 Send heartbeat to 0
+2024/02/13 00:05:07 2 receive heartbeat term 6 from 1
+2024/02/13 00:05:07 2 Sleep 485 miliseconds?
+2024/02/13 00:05:07 0 Start send heartbeats
+2024/02/13 00:05:07 0 Send heartbeat to 2
+2024/02/13 00:05:07 0 Send heartbeat to 1
+2024/02/13 00:05:07 1 Start send heartbeats
+2024/02/13 00:05:07 1 Send heartbeat to 2
+2024/02/13 00:05:07 1 Send heartbeat to 0
+2024/02/13 00:05:07 2 receive heartbeat term 6 from 1
+2024/02/13 00:05:07 0 Start send heartbeats
+2024/02/13 00:05:07 0 Send heartbeat to 1
+2024/02/13 00:05:07 0 Send heartbeat to 2
+2024/02/13 00:05:07 1 Start send heartbeats
+2024/02/13 00:05:07 1 Send heartbeat to 2
+2024/02/13 00:05:07 1 Send heartbeat to 0
+2024/02/13 00:05:07 2 receive heartbeat term 6 from 1
+2024/02/13 00:05:07 0 Start send heartbeats
+2024/02/13 00:05:07 0 Send heartbeat to 2
+2024/02/13 00:05:07 0 Send heartbeat to 1
+2024/02/13 00:05:07 1 Start send heartbeats
+2024/02/13 00:05:07 1 Send heartbeat to 2
+2024/02/13 00:05:07 1 Send heartbeat to 0
+2024/02/13 00:05:07 2 receive heartbeat term 6 from 1
+2024/02/13 00:05:07 0 Sleep 470 miliseconds?
+2024/02/13 00:05:07 2 Sleep 511 miliseconds?
+2024/02/13 00:05:07 1 Sleep 515 miliseconds?
+2024/02/13 00:05:07 0 Start send heartbeats
+2024/02/13 00:05:07 0 Send heartbeat to 2
+2024/02/13 00:05:07 0 Send heartbeat to 1
+2024/02/13 00:05:07 1 receive heartbeat term 2 from 0
+2024/02/13 00:05:07 2 receive heartbeat term 2 from 0
+2024/02/13 00:05:07 0 Update term to 2
+2024/02/13 00:05:07 1 Start send heartbeats
+2024/02/13 00:05:07 1 Send heartbeat to 2
+2024/02/13 00:05:07 1 Send heartbeat to 0
+2024/02/13 00:05:07 2 receive heartbeat term 6 from 1
+2024/02/13 00:05:07 0 receive heartbeat term 6 from 1
+2024/02/13 00:05:07 0 Exit send heartbeat goroutine
+2024/02/13 00:05:07 1 Start send heartbeats
+2024/02/13 00:05:07 1 Send heartbeat to 2
+2024/02/13 00:05:07 1 Send heartbeat to 0
+2024/02/13 00:05:07 0 receive heartbeat term 6 from 1
+2024/02/13 00:05:07 2 receive heartbeat term 6 from 1
+2024/02/13 00:05:08 1 Start send heartbeats
+2024/02/13 00:05:08 1 Send heartbeat to 2
+2024/02/13 00:05:08 1 Send heartbeat to 0
+2024/02/13 00:05:08 2 receive heartbeat term 6 from 1
+2024/02/13 00:05:08 0 receive heartbeat term 6 from 1
+2024/02/13 00:05:08 0 Sleep 434 miliseconds?
+  ... Passed --   5.0  3   96    8358    0
+2024/02/13 00:05:08 0 Start ticker
+2024/02/13 00:05:08 0 Sleep 474 miliseconds?
+2024/02/13 00:05:08 1 Start ticker
+2024/02/13 00:05:08 1 Sleep 575 miliseconds?
+2024/02/13 00:05:08 2 Start ticker
+2024/02/13 00:05:08 2 Sleep 501 miliseconds?
+2024/02/13 00:05:08 3 Start ticker
+2024/02/13 00:05:08 3 Sleep 571 miliseconds?
+2024/02/13 00:05:08 4 Start ticker
+2024/02/13 00:05:08 4 Sleep 597 miliseconds?
+2024/02/13 00:05:08 5 Start ticker
+2024/02/13 00:05:08 5 Sleep 455 miliseconds?
+2024/02/13 00:05:08 6 Start ticker
+2024/02/13 00:05:08 6 Sleep 461 miliseconds?
+Test (3A): multiple elections ...
+2024/02/13 00:05:08 1 Exit send heartbeat goroutine
+2024/02/13 00:05:08 2 Recv vote error. retry
+2024/02/13 00:05:08 1 Recv vote error. retry
+2024/02/13 00:05:08 5 Found timeout, become candidate.
+2024/02/13 00:05:08 5 Sleep 534 miliseconds?
+2024/02/13 00:05:08 5 Send request vote to 0
+2024/02/13 00:05:08 5 Send request vote to 1
+2024/02/13 00:05:08 5 Send request vote to 2
+2024/02/13 00:05:08 5 Send request vote to 4
+2024/02/13 00:05:08 1 receive requestvote from 5
+2024/02/13 00:05:08 1 Update term to 0
+2024/02/13 00:05:08 2 receive requestvote from 5
+2024/02/13 00:05:08 2 Update term to 0
+2024/02/13 00:05:08 0 receive requestvote from 5
+2024/02/13 00:05:08 0 Update term to 0
+2024/02/13 00:05:08 5 Recv vote reply from 1. be voted
+2024/02/13 00:05:08 4 receive requestvote from 5
+2024/02/13 00:05:08 4 Update term to 0
+2024/02/13 00:05:08 5 Recv vote reply from 2. be voted
+2024/02/13 00:05:08 5 Send request vote to 3
+2024/02/13 00:05:08 5 Recv vote reply from 4. be voted
+2024/02/13 00:05:08 5 Send request vote to 6
+2024/02/13 00:05:08 5 Start send heartbeat goroutine
+2024/02/13 00:05:08 5 Start send heartbeats
+2024/02/13 00:05:08 5 Send heartbeat to 6
+2024/02/13 00:05:08 3 receive requestvote from 5
+2024/02/13 00:05:08 3 Update term to 0
+2024/02/13 00:05:08 6 receive requestvote from 5
+2024/02/13 00:05:08 6 Update term to 0
+2024/02/13 00:05:08 6 receive heartbeat term 1 from 5
+2024/02/13 00:05:08 5 Recv vote reply from 3. be voted
+2024/02/13 00:05:08 5 Recv vote reply from 6. be voted
+2024/02/13 00:05:08 5 Send heartbeat to 1
+2024/02/13 00:05:08 5 Send heartbeat to 2
+2024/02/13 00:05:08 2 receive heartbeat term 1 from 5
+2024/02/13 00:05:08 5 Send heartbeat to 4
+2024/02/13 00:05:08 1 receive heartbeat term 1 from 5
+2024/02/13 00:05:08 5 Recv vote reply from 0. be voted
+2024/02/13 00:05:08 5 Send heartbeat to 0
+2024/02/13 00:05:08 4 receive heartbeat term 1 from 5
+2024/02/13 00:05:08 5 Send heartbeat to 3
+2024/02/13 00:05:08 0 receive heartbeat term 1 from 5
+2024/02/13 00:05:08 3 receive heartbeat term 1 from 5
+2024/02/13 00:05:08 6 Sleep 445 miliseconds?
+2024/02/13 00:05:08 0 Sleep 484 miliseconds?
+2024/02/13 00:05:08 2 Sleep 460 miliseconds?
+2024/02/13 00:05:08 3 Sleep 438 miliseconds?
+2024/02/13 00:05:08 1 Sleep 480 miliseconds?
+2024/02/13 00:05:08 4 Sleep 441 miliseconds?
+2024/02/13 00:05:08 5 Start send heartbeats
+2024/02/13 00:05:08 5 Send heartbeat to 6
+2024/02/13 00:05:08 5 Send heartbeat to 0
+2024/02/13 00:05:08 5 Send heartbeat to 3
+2024/02/13 00:05:08 5 Send heartbeat to 4
+2024/02/13 00:05:08 5 Send heartbeat to 2
+2024/02/13 00:05:08 5 Send heartbeat to 1
+2024/02/13 00:05:08 5 Start send heartbeats
+2024/02/13 00:05:08 5 Send heartbeat to 6
+2024/02/13 00:05:08 5 Send heartbeat to 0
+2024/02/13 00:05:08 5 Send heartbeat to 3
+2024/02/13 00:05:08 5 Send heartbeat to 2
+2024/02/13 00:05:08 5 Send heartbeat to 1
+2024/02/13 00:05:08 5 Send heartbeat to 4
+2024/02/13 00:05:09 6 Found timeout, become candidate.
+2024/02/13 00:05:09 6 Sleep 506 miliseconds?
+2024/02/13 00:05:09 6 Send request vote to 3
+2024/02/13 00:05:09 6 Send request vote to 0
+2024/02/13 00:05:09 6 Send request vote to 4
+2024/02/13 00:05:09 6 Send request vote to 2
+2024/02/13 00:05:09 6 Send request vote to 1
+2024/02/13 00:05:09 6 Send request vote to 5
+2024/02/13 00:05:09 5 Start send heartbeats
+2024/02/13 00:05:09 5 Send heartbeat to 6
+2024/02/13 00:05:09 5 Send heartbeat to 0
+2024/02/13 00:05:09 5 Send heartbeat to 1
+2024/02/13 00:05:09 5 Send heartbeat to 3
+2024/02/13 00:05:09 5 Send heartbeat to 2
+2024/02/13 00:05:09 5 Send heartbeat to 4
+2024/02/13 00:05:09 0 Found timeout, become candidate.
+2024/02/13 00:05:09 0 Sleep 523 miliseconds?
+2024/02/13 00:05:09 0 Send request vote to 4
+2024/02/13 00:05:09 0 Send request vote to 2
+2024/02/13 00:05:09 0 Send request vote to 6
+2024/02/13 00:05:09 0 Send request vote to 5
+2024/02/13 00:05:09 0 Send request vote to 3
+2024/02/13 00:05:09 4 receive requestvote from 0
+2024/02/13 00:05:09 4 Update term to 1
+2024/02/13 00:05:09 0 Send request vote to 1
+2024/02/13 00:05:09 2 receive requestvote from 0
+2024/02/13 00:05:09 2 Update term to 1
+2024/02/13 00:05:09 0 Recv vote reply from 4. be voted
+2024/02/13 00:05:09 0 Recv vote reply from 2. be voted
+2024/02/13 00:05:09 1 receive requestvote from 0
+2024/02/13 00:05:09 1 Update term to 1
+2024/02/13 00:05:09 0 Recv vote reply from 1. be voted
+2024/02/13 00:05:09 0 Start send heartbeat goroutine
+2024/02/13 00:05:09 0 Start send heartbeats
+2024/02/13 00:05:09 0 Send heartbeat to 6
+2024/02/13 00:05:09 0 Send heartbeat to 1
+2024/02/13 00:05:09 1 receive heartbeat term 2 from 0
+2024/02/13 00:05:09 0 Send heartbeat to 4
+2024/02/13 00:05:09 0 Send heartbeat to 5
+2024/02/13 00:05:09 0 Send heartbeat to 2
+2024/02/13 00:05:09 0 Send heartbeat to 3
+2024/02/13 00:05:09 4 receive heartbeat term 2 from 0
+2024/02/13 00:05:09 2 receive heartbeat term 2 from 0
+2024/02/13 00:05:09 2 Sleep 547 miliseconds?
+2024/02/13 00:05:09 5 Sleep 462 miliseconds?
+2024/02/13 00:05:09 3 Found timeout, become candidate.
+2024/02/13 00:05:09 3 Sleep 521 miliseconds?
+2024/02/13 00:05:09 3 Send request vote to 0
+2024/02/13 00:05:09 3 Send request vote to 1
+2024/02/13 00:05:09 3 Send request vote to 4
+2024/02/13 00:05:09 3 Send request vote to 2
+2024/02/13 00:05:09 3 Send request vote to 6
+2024/02/13 00:05:09 3 Send request vote to 5
+2024/02/13 00:05:09 4 Sleep 474 miliseconds?
+2024/02/13 00:05:09 1 Sleep 386 miliseconds?
+2024/02/13 00:05:09 5 Start send heartbeats
+2024/02/13 00:05:09 5 Send heartbeat to 6
+2024/02/13 00:05:09 5 Send heartbeat to 2
+2024/02/13 00:05:09 5 Send heartbeat to 3
+2024/02/13 00:05:09 5 Send heartbeat to 0
+2024/02/13 00:05:09 5 Send heartbeat to 4
+2024/02/13 00:05:09 5 Send heartbeat to 1
+2024/02/13 00:05:09 3 receive heartbeat term 1 from 5
+2024/02/13 00:05:09 2 receive heartbeat term 1 from 5
+2024/02/13 00:05:09 1 receive heartbeat term 1 from 5
+2024/02/13 00:05:09 5 Update term to 1
+2024/02/13 00:05:09 0 receive heartbeat term 1 from 5
+2024/02/13 00:05:09 0 Start send heartbeats
+2024/02/13 00:05:09 0 Send heartbeat to 6
+2024/02/13 00:05:09 0 Send heartbeat to 3
+2024/02/13 00:05:09 0 Send heartbeat to 4
+2024/02/13 00:05:09 0 Send heartbeat to 5
+2024/02/13 00:05:09 3 receive heartbeat term 2 from 0
+2024/02/13 00:05:09 0 Send heartbeat to 1
+2024/02/13 00:05:09 0 Send heartbeat to 2
+2024/02/13 00:05:09 2 receive heartbeat term 2 from 0
+2024/02/13 00:05:09 3 Candidate Update term to 2
+2024/02/13 00:05:09 1 receive heartbeat term 2 from 0
+2024/02/13 00:05:09 5 receive heartbeat term 2 from 0
+2024/02/13 00:05:09 1 Recv vote error. retry
+2024/02/13 00:05:09 5 Exit send heartbeat goroutine
+2024/02/13 00:05:09 0 Start send heartbeats
+2024/02/13 00:05:09 0 Send heartbeat to 6
+2024/02/13 00:05:09 0 Send heartbeat to 3
+2024/02/13 00:05:09 0 Send heartbeat to 4
+2024/02/13 00:05:09 0 Send heartbeat to 5
+2024/02/13 00:05:09 3 receive heartbeat term 2 from 0
+2024/02/13 00:05:09 0 Send heartbeat to 1
+2024/02/13 00:05:09 0 Send heartbeat to 2
+2024/02/13 00:05:09 5 receive heartbeat term 2 from 0
+2024/02/13 00:05:09 2 receive heartbeat term 2 from 0
+2024/02/13 00:05:09 1 receive heartbeat term 2 from 0
+2024/02/13 00:05:09 0 Start send heartbeats
+2024/02/13 00:05:09 0 Send heartbeat to 6
+2024/02/13 00:05:09 0 Send heartbeat to 3
+2024/02/13 00:05:09 0 Send heartbeat to 4
+2024/02/13 00:05:09 0 Send heartbeat to 5
+2024/02/13 00:05:09 0 Send heartbeat to 1
+2024/02/13 00:05:09 3 receive heartbeat term 2 from 0
+2024/02/13 00:05:09 5 receive heartbeat term 2 from 0
+2024/02/13 00:05:09 1 receive heartbeat term 2 from 0
+2024/02/13 00:05:09 0 Send heartbeat to 2
+2024/02/13 00:05:09 2 receive heartbeat term 2 from 0
+2024/02/13 00:05:09 6 Found timeout, become candidate.
+2024/02/13 00:05:09 6 Sleep 579 miliseconds?
+2024/02/13 00:05:09 6 Send request vote to 0
+2024/02/13 00:05:09 6 Send request vote to 3
+2024/02/13 00:05:09 6 Send request vote to 4
+2024/02/13 00:05:09 6 Send request vote to 5
+2024/02/13 00:05:09 6 Send request vote to 1
+2024/02/13 00:05:09 6 Send request vote to 2
+2024/02/13 00:05:09 1 Sleep 491 miliseconds?
+2024/02/13 00:05:09 5 Sleep 504 miliseconds?
+2024/02/13 00:05:09 0 Sleep 456 miliseconds?
+2024/02/13 00:05:09 0 Recv vote error. retry
+2024/02/13 00:05:09 2 Sleep 409 miliseconds?
+2024/02/13 00:05:09 4 Found timeout, become candidate.
+2024/02/13 00:05:09 4 Sleep 596 miliseconds?
+2024/02/13 00:05:09 4 Send request vote to 0
+2024/02/13 00:05:09 4 Send request vote to 1
+2024/02/13 00:05:09 4 Send request vote to 3
+2024/02/13 00:05:09 1 receive requestvote from 4
+2024/02/13 00:05:09 1 Update term to 2
+2024/02/13 00:05:09 4 Send request vote to 2
+2024/02/13 00:05:09 4 Send request vote to 6
+2024/02/13 00:05:09 4 Send request vote to 5
+2024/02/13 00:05:09 5 receive requestvote from 4
+2024/02/13 00:05:09 5 Update term to 2
+2024/02/13 00:05:09 4 Recv vote reply from 1. be voted
+2024/02/13 00:05:09 6 receive requestvote from 4
+2024/02/13 00:05:09 4 Recv vote reply from 5. be voted
+2024/02/13 00:05:09 4 Recv vote reply from 6. vote fail
+2024/02/13 00:05:09 3 Sleep 363 miliseconds?
+2024/02/13 00:05:09 0 Start send heartbeats
+2024/02/13 00:05:09 0 Send heartbeat to 6
+2024/02/13 00:05:09 0 Send heartbeat to 4
+2024/02/13 00:05:09 0 Send heartbeat to 1
+2024/02/13 00:05:09 0 Send heartbeat to 5
+2024/02/13 00:05:09 0 Send heartbeat to 3
+2024/02/13 00:05:09 0 Send heartbeat to 2
+2024/02/13 00:05:09 1 Recv vote error. retry
+2024/02/13 00:05:09 4 Recv vote error. retry
+2024/02/13 00:05:09 0 Start send heartbeats
+2024/02/13 00:05:09 0 Send heartbeat to 6
+2024/02/13 00:05:09 0 Send heartbeat to 3
+2024/02/13 00:05:09 0 Send heartbeat to 4
+2024/02/13 00:05:09 0 Send heartbeat to 5
+2024/02/13 00:05:09 0 Send heartbeat to 1
+2024/02/13 00:05:09 0 Send heartbeat to 2
+2024/02/13 00:05:09 0 Start send heartbeats
+2024/02/13 00:05:09 0 Send heartbeat to 6
+2024/02/13 00:05:09 0 Send heartbeat to 1
+2024/02/13 00:05:09 0 Send heartbeat to 4
+2024/02/13 00:05:09 0 Send heartbeat to 2
+2024/02/13 00:05:09 0 Send heartbeat to 5
+2024/02/13 00:05:09 0 Send heartbeat to 3
+2024/02/13 00:05:10 3 Found timeout, become candidate.
+2024/02/13 00:05:10 3 Sleep 529 miliseconds?
+2024/02/13 00:05:10 3 Send request vote to 4
+2024/02/13 00:05:10 3 Send request vote to 0
+2024/02/13 00:05:10 3 Send request vote to 1
+2024/02/13 00:05:10 3 Send request vote to 5
+2024/02/13 00:05:10 3 Send request vote to 2
+2024/02/13 00:05:10 3 Send request vote to 6
+2024/02/13 00:05:10 2 Recv vote error. retry
+2024/02/13 00:05:10 2 Found timeout, become candidate.
+2024/02/13 00:05:10 2 Sleep 586 miliseconds?
+2024/02/13 00:05:10 2 Send request vote to 0
+2024/02/13 00:05:10 2 Send request vote to 1
+2024/02/13 00:05:10 2 Send request vote to 3
+2024/02/13 00:05:10 2 Send request vote to 4
+2024/02/13 00:05:10 2 Send request vote to 5
+2024/02/13 00:05:10 2 Send request vote to 6
+2024/02/13 00:05:10 1 Sleep 130 miliseconds?
+2024/02/13 00:05:10 0 Sleep 519 miliseconds?
+2024/02/13 00:05:10 2 Recv vote error. retry
+2024/02/13 00:05:10 5 Sleep 44 miliseconds?
+2024/02/13 00:05:10 6 Found timeout, become candidate.
+2024/02/13 00:05:10 6 Sleep 458 miliseconds?
+2024/02/13 00:05:10 6 Send request vote to 3
+2024/02/13 00:05:10 6 Send request vote to 1
+2024/02/13 00:05:10 6 Send request vote to 2
+2024/02/13 00:05:10 1 receive requestvote from 6
+2024/02/13 00:05:10 1 Update term to 3
+2024/02/13 00:05:10 6 Send request vote to 4
+2024/02/13 00:05:10 6 Send request vote to 5
+2024/02/13 00:05:10 6 Recv vote reply from 1. be voted
+2024/02/13 00:05:10 6 Send request vote to 0
+2024/02/13 00:05:10 0 Start send heartbeats
+2024/02/13 00:05:10 0 Send heartbeat to 6
+2024/02/13 00:05:10 5 Found timeout, become candidate.
+2024/02/13 00:05:10 5 Sleep 468 miliseconds?
+2024/02/13 00:05:10 4 receive requestvote from 6
+2024/02/13 00:05:10 4 Update term to 3
+2024/02/13 00:05:10 0 Send heartbeat to 3
+2024/02/13 00:05:10 0 Send heartbeat to 4
+2024/02/13 00:05:10 0 Send heartbeat to 5
+2024/02/13 00:05:10 5 Send request vote to 0
+2024/02/13 00:05:10 5 receive requestvote from 6
+2024/02/13 00:05:10 5 Send request vote to 1
+2024/02/13 00:05:10 6 Recv vote reply from 5. vote fail
+2024/02/13 00:05:10 1 receive requestvote from 5
+2024/02/13 00:05:10 5 Send request vote to 2
+2024/02/13 00:05:10 5 Send request vote to 3
+2024/02/13 00:05:10 5 Send request vote to 6
+2024/02/13 00:05:10 5 Recv vote reply from 1. vote fail
+2024/02/13 00:05:10 0 Send heartbeat to 2
+2024/02/13 00:05:10 5 Send request vote to 4
+2024/02/13 00:05:10 0 Send heartbeat to 1
+2024/02/13 00:05:10 6 Recv vote reply from 4. be voted
+2024/02/13 00:05:10 6 receive requestvote from 5
+2024/02/13 00:05:10 4 receive requestvote from 5
+2024/02/13 00:05:10 5 Recv vote reply from 6. vote fail
+2024/02/13 00:05:10 5 Recv vote reply from 4. vote fail
+2024/02/13 00:05:10 1 Sleep 506 miliseconds?
+2024/02/13 00:05:10 6 Recv vote error. retry
+2024/02/13 00:05:10 4 Sleep 428 miliseconds?
+2024/02/13 00:05:10 0 Start send heartbeats
+2024/02/13 00:05:10 0 Send heartbeat to 6
+2024/02/13 00:05:10 0 Send heartbeat to 2
+2024/02/13 00:05:10 0 Send heartbeat to 3
+2024/02/13 00:05:10 0 Send heartbeat to 1
+2024/02/13 00:05:10 0 Send heartbeat to 4
+2024/02/13 00:05:10 0 Send heartbeat to 5
+2024/02/13 00:05:10 2 Recv vote error. retry
+2024/02/13 00:05:10 0 Start send heartbeats
+2024/02/13 00:05:10 0 Send heartbeat to 6
+2024/02/13 00:05:10 0 Send heartbeat to 3
+2024/02/13 00:05:10 0 Send heartbeat to 4
+2024/02/13 00:05:10 0 Send heartbeat to 2
+2024/02/13 00:05:10 0 Send heartbeat to 5
+2024/02/13 00:05:10 0 Send heartbeat to 1
+2024/02/13 00:05:10 3 Found timeout, become candidate.
+2024/02/13 00:05:10 3 Sleep 464 miliseconds?
+2024/02/13 00:05:10 3 Send request vote to 0
+2024/02/13 00:05:10 3 Send request vote to 1
+2024/02/13 00:05:10 3 Send request vote to 4
+2024/02/13 00:05:10 3 Send request vote to 6
+2024/02/13 00:05:10 3 Send request vote to 5
+2024/02/13 00:05:10 3 Send request vote to 2
+2024/02/13 00:05:10 2 Recv vote error. retry
+2024/02/13 00:05:10 6 Found timeout, become candidate.
+2024/02/13 00:05:10 6 Sleep 546 miliseconds?
+2024/02/13 00:05:10 6 Send request vote to 3
+2024/02/13 00:05:10 6 Send request vote to 0
+2024/02/13 00:05:10 6 Send request vote to 1
+2024/02/13 00:05:10 6 Send request vote to 4
+2024/02/13 00:05:10 6 Send request vote to 5
+2024/02/13 00:05:10 4 receive requestvote from 6
+2024/02/13 00:05:10 4 Update term to 4
+2024/02/13 00:05:10 6 Send request vote to 2
+2024/02/13 00:05:10 1 receive requestvote from 6
+2024/02/13 00:05:10 1 Update term to 4
+2024/02/13 00:05:10 6 Recv vote reply from 4. be voted
+2024/02/13 00:05:10 6 Recv vote reply from 1. be voted
+2024/02/13 00:05:10 5 receive requestvote from 6
+2024/02/13 00:05:10 5 Update term to 4
+2024/02/13 00:05:10 6 Recv vote reply from 5. be voted
+2024/02/13 00:05:10 6 Start send heartbeat goroutine
+2024/02/13 00:05:10 6 Start send heartbeats
+2024/02/13 00:05:10 6 Send heartbeat to 5
+2024/02/13 00:05:10 6 Send heartbeat to 2
+2024/02/13 00:05:10 6 Send heartbeat to 0
+2024/02/13 00:05:10 6 Send heartbeat to 1
+2024/02/13 00:05:10 5 receive heartbeat term 5 from 6
+2024/02/13 00:05:10 6 Send heartbeat to 3
+2024/02/13 00:05:10 1 receive heartbeat term 5 from 6
+2024/02/13 00:05:10 6 Send heartbeat to 4
+2024/02/13 00:05:10 4 receive heartbeat term 5 from 6
+2024/02/13 00:05:10 0 Sleep 500 miliseconds?
+2024/02/13 00:05:10 0 Start send heartbeats
+2024/02/13 00:05:10 0 Send heartbeat to 6
+2024/02/13 00:05:10 0 Send heartbeat to 3
+2024/02/13 00:05:10 0 Send heartbeat to 1
+2024/02/13 00:05:10 0 Send heartbeat to 4
+2024/02/13 00:05:10 0 Send heartbeat to 2
+2024/02/13 00:05:10 0 Send heartbeat to 5
+2024/02/13 00:05:10 5 Sleep 433 miliseconds?
+2024/02/13 00:05:10 3 Recv vote error. retry
+2024/02/13 00:05:10 2 Recv vote error. retry
+2024/02/13 00:05:10 2 Found timeout, become candidate.
+2024/02/13 00:05:10 2 Sleep 529 miliseconds?
+2024/02/13 00:05:10 2 Send request vote to 4
+2024/02/13 00:05:10 2 Send request vote to 0
+2024/02/13 00:05:10 2 Send request vote to 1
+2024/02/13 00:05:10 2 Send request vote to 5
+2024/02/13 00:05:10 2 Send request vote to 6
+2024/02/13 00:05:10 2 Send request vote to 3
+2024/02/13 00:05:10 4 Sleep 414 miliseconds?
+2024/02/13 00:05:10 1 Sleep 437 miliseconds?
+2024/02/13 00:05:10 1 Recv vote error. retry
+2024/02/13 00:05:10 6 Start send heartbeats
+2024/02/13 00:05:10 6 Send heartbeat to 0
+2024/02/13 00:05:10 6 Send heartbeat to 2
+2024/02/13 00:05:10 6 Send heartbeat to 3
+2024/02/13 00:05:10 6 Send heartbeat to 1
+2024/02/13 00:05:10 6 Send heartbeat to 4
+2024/02/13 00:05:10 6 Send heartbeat to 5
+2024/02/13 00:05:10 0 Start send heartbeats
+2024/02/13 00:05:10 0 Send heartbeat to 1
+2024/02/13 00:05:10 0 Send heartbeat to 2
+2024/02/13 00:05:10 0 Send heartbeat to 3
+2024/02/13 00:05:10 0 Send heartbeat to 4
+2024/02/13 00:05:10 0 Send heartbeat to 5
+2024/02/13 00:05:10 0 Send heartbeat to 6
+2024/02/13 00:05:10 1 Recv vote error. retry
+2024/02/13 00:05:10 6 Start send heartbeats
+2024/02/13 00:05:10 6 Send heartbeat to 0
+2024/02/13 00:05:10 6 Send heartbeat to 5
+2024/02/13 00:05:10 6 Send heartbeat to 2
+2024/02/13 00:05:10 6 Send heartbeat to 4
+2024/02/13 00:05:10 6 Send heartbeat to 1
+2024/02/13 00:05:10 6 Send heartbeat to 3
+2024/02/13 00:05:10 0 Start send heartbeats
+2024/02/13 00:05:10 0 Send heartbeat to 6
+2024/02/13 00:05:10 0 Send heartbeat to 1
+2024/02/13 00:05:10 0 Send heartbeat to 4
+2024/02/13 00:05:10 0 Send heartbeat to 5
+2024/02/13 00:05:10 0 Send heartbeat to 3
+2024/02/13 00:05:10 0 Send heartbeat to 2
+2024/02/13 00:05:10 3 Recv vote error. retry
+2024/02/13 00:05:11 3 Found timeout, become candidate.
+2024/02/13 00:05:11 3 Sleep 458 miliseconds?
+2024/02/13 00:05:11 3 Send request vote to 4
+2024/02/13 00:05:11 3 Send request vote to 2
+2024/02/13 00:05:11 3 Send request vote to 5
+2024/02/13 00:05:11 3 Send request vote to 1
+2024/02/13 00:05:11 4 receive requestvote from 3
+2024/02/13 00:05:11 3 Send request vote to 0
+2024/02/13 00:05:11 5 receive requestvote from 3
+2024/02/13 00:05:11 3 Send request vote to 6
+2024/02/13 00:05:11 2 receive requestvote from 3
+2024/02/13 00:05:11 2 Update term to 4
+2024/02/13 00:05:11 3 Recv vote reply from 5. vote fail
+2024/02/13 00:05:11 3 Recv vote reply from 4. vote fail
+2024/02/13 00:05:11 3 Recv vote reply from 2. be voted
+2024/02/13 00:05:11 6 Start send heartbeats
+2024/02/13 00:05:11 6 Send heartbeat to 5
+2024/02/13 00:05:11 6 Send heartbeat to 2
+2024/02/13 00:05:11 6 Send heartbeat to 3
+2024/02/13 00:05:11 6 Send heartbeat to 0
+2024/02/13 00:05:11 6 Send heartbeat to 1
+2024/02/13 00:05:11 6 Send heartbeat to 4
+2024/02/13 00:05:11 5 Found timeout, become candidate.
+2024/02/13 00:05:11 3 Recv vote error. retry
+2024/02/13 00:05:11 0 Start send heartbeats
+2024/02/13 00:05:11 5 Send request vote to 0
+2024/02/13 00:05:11 0 Send heartbeat to 6
+2024/02/13 00:05:11 5 Sleep 468 miliseconds?
+2024/02/13 00:05:11 0 Send heartbeat to 1
+2024/02/13 00:05:11 5 Send request vote to 2
+2024/02/13 00:05:11 0 Send heartbeat to 2
+2024/02/13 00:05:11 0 Send heartbeat to 3
+2024/02/13 00:05:11 0 Send heartbeat to 4
+2024/02/13 00:05:11 0 Send heartbeat to 5
+2024/02/13 00:05:11 5 Send request vote to 1
+2024/02/13 00:05:11 2 receive requestvote from 5
+2024/02/13 00:05:11 2 Update term to 5
+2024/02/13 00:05:11 5 Send request vote to 4
+2024/02/13 00:05:11 5 Send request vote to 6
+2024/02/13 00:05:11 5 Send request vote to 3
+2024/02/13 00:05:11 5 Recv vote reply from 2. be voted
+2024/02/13 00:05:11 4 receive requestvote from 5
+2024/02/13 00:05:11 4 Update term to 5
+2024/02/13 00:05:11 5 Recv vote reply from 4. be voted
+2024/02/13 00:05:11 3 receive requestvote from 5
+2024/02/13 00:05:11 3 Update term to 5
+2024/02/13 00:05:11 5 Recv vote reply from 3. be voted
+2024/02/13 00:05:11 5 Start send heartbeat goroutine
+2024/02/13 00:05:11 5 Start send heartbeats
+2024/02/13 00:05:11 5 Send heartbeat to 6
+2024/02/13 00:05:11 5 Send heartbeat to 2
+2024/02/13 00:05:11 5 Send heartbeat to 0
+2024/02/13 00:05:11 5 Send heartbeat to 1
+2024/02/13 00:05:11 5 Send heartbeat to 3
+2024/02/13 00:05:11 5 Send heartbeat to 4
+2024/02/13 00:05:11 2 receive heartbeat term 6 from 5
+2024/02/13 00:05:11 3 receive heartbeat term 6 from 5
+2024/02/13 00:05:11 4 receive heartbeat term 6 from 5
+2024/02/13 00:05:11 2 Recv vote error. retry
+2024/02/13 00:05:11 4 Sleep 549 miliseconds?
+2024/02/13 00:05:11 0 Sleep 459 miliseconds?
+2024/02/13 00:05:11 6 Sleep 493 miliseconds?
+2024/02/13 00:05:11 1 Found timeout, become candidate.
+2024/02/13 00:05:11 1 Sleep 503 miliseconds?
+2024/02/13 00:05:11 1 Send request vote to 0
+2024/02/13 00:05:11 1 Send request vote to 4
+2024/02/13 00:05:11 1 Send request vote to 5
+2024/02/13 00:05:11 1 Send request vote to 6
+2024/02/13 00:05:11 1 Send request vote to 2
+2024/02/13 00:05:11 1 Send request vote to 3
+2024/02/13 00:05:11 1 Recv vote error. retry
+2024/02/13 00:05:11 2 Sleep 443 miliseconds?
+2024/02/13 00:05:11 6 Start send heartbeats
+2024/02/13 00:05:11 6 Send heartbeat to 5
+2024/02/13 00:05:11 6 Send heartbeat to 1
+2024/02/13 00:05:11 6 Send heartbeat to 2
+2024/02/13 00:05:11 6 Send heartbeat to 3
+2024/02/13 00:05:11 6 Send heartbeat to 0
+2024/02/13 00:05:11 6 Send heartbeat to 4
+2024/02/13 00:05:11 0 Start send heartbeats
+2024/02/13 00:05:11 0 Send heartbeat to 6
+2024/02/13 00:05:11 0 Send heartbeat to 3
+2024/02/13 00:05:11 0 Send heartbeat to 4
+2024/02/13 00:05:11 0 Send heartbeat to 1
+2024/02/13 00:05:11 0 Send heartbeat to 2
+2024/02/13 00:05:11 0 Send heartbeat to 5
+2024/02/13 00:05:11 5 Start send heartbeats
+2024/02/13 00:05:11 5 Send heartbeat to 6
+2024/02/13 00:05:11 5 Send heartbeat to 0
+2024/02/13 00:05:11 5 Send heartbeat to 3
+2024/02/13 00:05:11 5 Send heartbeat to 1
+2024/02/13 00:05:11 5 Send heartbeat to 4
+2024/02/13 00:05:11 4 receive heartbeat term 6 from 5
+2024/02/13 00:05:11 3 receive heartbeat term 6 from 5
+2024/02/13 00:05:11 5 Send heartbeat to 2
+2024/02/13 00:05:11 2 receive heartbeat term 6 from 5
+2024/02/13 00:05:11 6 Recv vote error. retry
+2024/02/13 00:05:11 1 Recv vote error. retry
+2024/02/13 00:05:11 6 Recv vote error. retry
+2024/02/13 00:05:11 6 Recv vote error. retry
+2024/02/13 00:05:11 6 Start send heartbeats
+2024/02/13 00:05:11 6 Send heartbeat to 5
+2024/02/13 00:05:11 6 Send heartbeat to 0
+2024/02/13 00:05:11 6 Send heartbeat to 1
+2024/02/13 00:05:11 1 receive heartbeat term 5 from 6
+2024/02/13 00:05:11 6 Update term to 5
+2024/02/13 00:05:11 6 Send heartbeat to 2
+2024/02/13 00:05:11 6 Send heartbeat to 3
+2024/02/13 00:05:11 3 receive heartbeat term 6 from 6
+2024/02/13 00:05:11 6 Send heartbeat to 4
+2024/02/13 00:05:11 4 receive heartbeat term 6 from 6
+2024/02/13 00:05:11 0 Start send heartbeats
+2024/02/13 00:05:11 5 Start send heartbeats
+2024/02/13 00:05:11 5 Send heartbeat to 0
+2024/02/13 00:05:11 5 Send heartbeat to 6
+2024/02/13 00:05:11 5 Send heartbeat to 2
+2024/02/13 00:05:11 5 Send heartbeat to 3
+2024/02/13 00:05:11 5 Send heartbeat to 4
+2024/02/13 00:05:11 5 Send heartbeat to 1
+2024/02/13 00:05:11 0 Send heartbeat to 6
+2024/02/13 00:05:11 0 Send heartbeat to 3
+2024/02/13 00:05:11 0 Send heartbeat to 1
+2024/02/13 00:05:11 0 Send heartbeat to 2
+2024/02/13 00:05:11 0 Send heartbeat to 4
+2024/02/13 00:05:11 0 Send heartbeat to 5
+2024/02/13 00:05:11 2 Recv vote error. retry
+2024/02/13 00:05:11 3 Recv vote error. retry
+2024/02/13 00:05:11 3 Sleep 334 miliseconds?
+2024/02/13 00:05:11 6 Exit send heartbeat goroutine
+2024/02/13 00:05:11 5 Start send heartbeats
+2024/02/13 00:05:11 5 Send heartbeat to 6
+2024/02/13 00:05:11 5 Send heartbeat to 0
+2024/02/13 00:05:11 5 Send heartbeat to 1
+2024/02/13 00:05:11 5 Send heartbeat to 2
+2024/02/13 00:05:11 5 Send heartbeat to 3
+2024/02/13 00:05:11 5 Send heartbeat to 4
+2024/02/13 00:05:11 0 Start send heartbeats
+2024/02/13 00:05:11 0 Send heartbeat to 6
+2024/02/13 00:05:11 0 Send heartbeat to 1
+2024/02/13 00:05:11 0 Send heartbeat to 2
+2024/02/13 00:05:11 0 Send heartbeat to 3
+2024/02/13 00:05:11 0 Send heartbeat to 4
+2024/02/13 00:05:11 0 Send heartbeat to 5
+2024/02/13 00:05:11 5 Sleep 565 miliseconds?
+2024/02/13 00:05:11 0 Sleep 589 miliseconds?
+2024/02/13 00:05:11 2 Sleep 127 miliseconds?
+2024/02/13 00:05:11 3 Recv vote error. retry
+2024/02/13 00:05:11 6 Found timeout, become candidate.
+2024/02/13 00:05:11 6 Sleep 572 miliseconds?
+2024/02/13 00:05:11 6 Send request vote to 0
+2024/02/13 00:05:11 6 Send request vote to 1
+2024/02/13 00:05:11 1 receive requestvote from 6
+2024/02/13 00:05:11 1 Update term to 6
+2024/02/13 00:05:11 6 Recv vote reply from 1. be voted
+2024/02/13 00:05:11 6 Send request vote to 2
+2024/02/13 00:05:11 6 Send request vote to 3
+2024/02/13 00:05:11 3 receive requestvote from 6
+2024/02/13 00:05:11 3 Update term to 6
+2024/02/13 00:05:11 6 Recv vote reply from 3. be voted
+2024/02/13 00:05:11 6 Send request vote to 4
+2024/02/13 00:05:11 4 receive requestvote from 6
+2024/02/13 00:05:11 4 Update term to 6
+2024/02/13 00:05:11 6 Recv vote reply from 4. be voted
+2024/02/13 00:05:11 6 Start send heartbeat goroutine
+2024/02/13 00:05:11 6 Start send heartbeats
+2024/02/13 00:05:11 6 Send heartbeat to 5
+2024/02/13 00:05:11 6 Send request vote to 5
+2024/02/13 00:05:11 6 Send heartbeat to 0
+2024/02/13 00:05:11 6 Send heartbeat to 1
+2024/02/13 00:05:11 1 receive heartbeat term 7 from 6
+2024/02/13 00:05:11 6 Send heartbeat to 2
+2024/02/13 00:05:11 6 Send heartbeat to 3
+2024/02/13 00:05:11 3 receive heartbeat term 7 from 6
+2024/02/13 00:05:11 6 Send heartbeat to 4
+2024/02/13 00:05:11 4 receive heartbeat term 7 from 6
+2024/02/13 00:05:11 1 Sleep 570 miliseconds?
+2024/02/13 00:05:11 3 Recv vote error. retry
+2024/02/13 00:05:11 4 Sleep 552 miliseconds?
+2024/02/13 00:05:11 3 Recv vote error. retry
+2024/02/13 00:05:11 1 Recv vote error. retry
+2024/02/13 00:05:11 5 Start send heartbeats
+2024/02/13 00:05:11 5 Send heartbeat to 6
+2024/02/13 00:05:11 5 Send heartbeat to 0
+2024/02/13 00:05:11 5 Send heartbeat to 1
+2024/02/13 00:05:11 5 Send heartbeat to 2
+2024/02/13 00:05:11 5 Send heartbeat to 3
+2024/02/13 00:05:11 5 Send heartbeat to 4
+2024/02/13 00:05:11 0 Start send heartbeats
+2024/02/13 00:05:11 0 Send heartbeat to 6
+2024/02/13 00:05:11 0 Send heartbeat to 1
+2024/02/13 00:05:11 0 Send heartbeat to 2
+2024/02/13 00:05:11 0 Send heartbeat to 3
+2024/02/13 00:05:11 0 Send heartbeat to 4
+2024/02/13 00:05:11 0 Send heartbeat to 5
+2024/02/13 00:05:11 5 Recv vote error. retry
+2024/02/13 00:05:11 2 Found timeout, become candidate.
+2024/02/13 00:05:11 2 Sleep 595 miliseconds?
+2024/02/13 00:05:11 2 Send request vote to 0
+2024/02/13 00:05:11 2 Send request vote to 1
+2024/02/13 00:05:11 2 Send request vote to 5
+2024/02/13 00:05:11 2 Send request vote to 4
+2024/02/13 00:05:11 2 Send request vote to 3
+2024/02/13 00:05:11 2 Send request vote to 6
+2024/02/13 00:05:11 3 Recv vote error. retry
+2024/02/13 00:05:11 6 Start send heartbeats
+2024/02/13 00:05:11 6 Send heartbeat to 2
+2024/02/13 00:05:11 6 Send heartbeat to 4
+2024/02/13 00:05:11 6 Send heartbeat to 5
+2024/02/13 00:05:11 4 receive heartbeat term 7 from 6
+2024/02/13 00:05:11 6 Send heartbeat to 3
+2024/02/13 00:05:11 6 Send heartbeat to 1
+2024/02/13 00:05:11 6 Send heartbeat to 0
+2024/02/13 00:05:11 3 receive heartbeat term 7 from 6
+2024/02/13 00:05:11 5 receive heartbeat term 7 from 6
+2024/02/13 00:05:11 6 Recv vote error. retry
+2024/02/13 00:05:11 0 Start send heartbeats
+2024/02/13 00:05:11 0 Send heartbeat to 6
+2024/02/13 00:05:11 0 Send heartbeat to 2
+2024/02/13 00:05:11 3 Sleep 408 miliseconds?
+2024/02/13 00:05:11 0 Send heartbeat to 4
+2024/02/13 00:05:11 0 Send heartbeat to 1
+2024/02/13 00:05:11 0 Send heartbeat to 5
+2024/02/13 00:05:11 5 Start send heartbeats
+2024/02/13 00:05:11 5 Send heartbeat to 6
+2024/02/13 00:05:11 6 receive heartbeat term 6 from 5
+2024/02/13 00:05:11 5 Update term to 6
+2024/02/13 00:05:11 0 Send heartbeat to 3
+2024/02/13 00:05:11 5 Send heartbeat to 0
+2024/02/13 00:05:11 5 Send heartbeat to 1
+2024/02/13 00:05:11 5 Send heartbeat to 2
+2024/02/13 00:05:11 5 Send heartbeat to 3
+2024/02/13 00:05:11 3 receive heartbeat term 7 from 5
+2024/02/13 00:05:11 5 Send heartbeat to 4
+2024/02/13 00:05:11 4 receive heartbeat term 7 from 5
+2024/02/13 00:05:11 6 Start send heartbeats
+2024/02/13 00:05:11 6 Send heartbeat to 5
+2024/02/13 00:05:11 6 Send heartbeat to 3
+2024/02/13 00:05:11 6 Send heartbeat to 2
+2024/02/13 00:05:11 6 Send heartbeat to 4
+2024/02/13 00:05:11 6 Send heartbeat to 0
+2024/02/13 00:05:11 6 Send heartbeat to 1
+2024/02/13 00:05:11 3 receive heartbeat term 7 from 6
+2024/02/13 00:05:11 5 receive heartbeat term 7 from 6
+2024/02/13 00:05:11 4 receive heartbeat term 7 from 6
+2024/02/13 00:05:11 6 Recv vote error. retry
+2024/02/13 00:05:11 3 Recv vote error. retry
+2024/02/13 00:05:11 5 Exit send heartbeat goroutine
+2024/02/13 00:05:11 0 Start send heartbeats
+2024/02/13 00:05:11 0 Send heartbeat to 6
+2024/02/13 00:05:11 0 Send heartbeat to 1
+2024/02/13 00:05:11 0 Send heartbeat to 3
+2024/02/13 00:05:11 0 Send heartbeat to 4
+2024/02/13 00:05:11 0 Send heartbeat to 5
+2024/02/13 00:05:11 0 Send heartbeat to 2
+2024/02/13 00:05:11 5 Recv vote error. retry
+2024/02/13 00:05:12 6 Start send heartbeats
+2024/02/13 00:05:12 6 Send heartbeat to 5
+2024/02/13 00:05:12 6 Send heartbeat to 1
+2024/02/13 00:05:12 6 Send heartbeat to 4
+2024/02/13 00:05:12 6 Send heartbeat to 3
+2024/02/13 00:05:12 3 receive heartbeat term 7 from 6
+2024/02/13 00:05:12 5 receive heartbeat term 7 from 6
+2024/02/13 00:05:12 4 receive heartbeat term 7 from 6
+2024/02/13 00:05:12 6 Send heartbeat to 0
+2024/02/13 00:05:12 6 Send heartbeat to 2
+2024/02/13 00:05:12 5 Sleep 582 miliseconds?
+2024/02/13 00:05:12 3 Recv vote error. retry
+2024/02/13 00:05:12 0 Start send heartbeats
+2024/02/13 00:05:12 0 Send heartbeat to 6
+2024/02/13 00:05:12 0 Send heartbeat to 3
+2024/02/13 00:05:12 0 Send heartbeat to 4
+2024/02/13 00:05:12 0 Send heartbeat to 2
+2024/02/13 00:05:12 0 Send heartbeat to 5
+2024/02/13 00:05:12 0 Send heartbeat to 1
+2024/02/13 00:05:12 0 Sleep 489 miliseconds?
+2024/02/13 00:05:12 4 Sleep 365 miliseconds?
+2024/02/13 00:05:12 6 Sleep 502 miliseconds?
+2024/02/13 00:05:12 4 Recv vote error. retry
+2024/02/13 00:05:12 1 Found timeout, become candidate.
+2024/02/13 00:05:12 1 Sleep 463 miliseconds?
+2024/02/13 00:05:12 1 Send request vote to 4
+2024/02/13 00:05:12 1 Send request vote to 2
+2024/02/13 00:05:12 1 Send request vote to 5
+2024/02/13 00:05:12 1 Send request vote to 6
+2024/02/13 00:05:12 1 Send request vote to 3
+2024/02/13 00:05:12 5 receive requestvote from 1
+2024/02/13 00:05:12 5 Update term to 7
+2024/02/13 00:05:12 2 receive requestvote from 1
+2024/02/13 00:05:12 2 Update term to 7
+2024/02/13 00:05:12 3 receive requestvote from 1
+2024/02/13 00:05:12 3 Update term to 7
+2024/02/13 00:05:12 1 Recv vote reply from 5. be voted
+2024/02/13 00:05:12 1 Send request vote to 0
+2024/02/13 00:05:12 1 Recv vote reply from 2. be voted
+2024/02/13 00:05:12 1 Recv vote reply from 3. be voted
+2024/02/13 00:05:12 1 Start send heartbeat goroutine
+2024/02/13 00:05:12 1 Start send heartbeats
+2024/02/13 00:05:12 1 Send heartbeat to 6
+2024/02/13 00:05:12 1 Send heartbeat to 3
+2024/02/13 00:05:12 1 Send heartbeat to 4
+2024/02/13 00:05:12 1 Send heartbeat to 5
+2024/02/13 00:05:12 5 receive heartbeat term 8 from 1
+2024/02/13 00:05:12 3 receive heartbeat term 8 from 1
+2024/02/13 00:05:12 1 Send heartbeat to 0
+2024/02/13 00:05:12 1 Send heartbeat to 2
+2024/02/13 00:05:12 2 receive heartbeat term 8 from 1
+2024/02/13 00:05:12 6 Start send heartbeats
+2024/02/13 00:05:12 6 Send heartbeat to 0
+2024/02/13 00:05:12 6 Send heartbeat to 5
+2024/02/13 00:05:12 6 Send heartbeat to 2
+2024/02/13 00:05:12 6 Send heartbeat to 4
+2024/02/13 00:05:12 6 Send heartbeat to 3
+2024/02/13 00:05:12 6 Send heartbeat to 1
+2024/02/13 00:05:12 3 Sleep 572 miliseconds?
+2024/02/13 00:05:12 0 Start send heartbeats
+2024/02/13 00:05:12 0 Send heartbeat to 6
+2024/02/13 00:05:12 0 Send heartbeat to 3
+2024/02/13 00:05:12 0 Send heartbeat to 4
+2024/02/13 00:05:12 0 Send heartbeat to 5
+2024/02/13 00:05:12 0 Send heartbeat to 1
+2024/02/13 00:05:12 0 Send heartbeat to 2
+2024/02/13 00:05:12 2 Sleep 446 miliseconds?
+2024/02/13 00:05:12 1 Start send heartbeats
+2024/02/13 00:05:12 1 Send heartbeat to 6
+2024/02/13 00:05:12 1 Send heartbeat to 3
+2024/02/13 00:05:12 1 Send heartbeat to 4
+2024/02/13 00:05:12 1 Send heartbeat to 5
+2024/02/13 00:05:12 3 receive heartbeat term 8 from 1
+2024/02/13 00:05:12 5 receive heartbeat term 8 from 1
+2024/02/13 00:05:12 1 Send heartbeat to 2
+2024/02/13 00:05:12 1 Send heartbeat to 0
+2024/02/13 00:05:12 2 receive heartbeat term 8 from 1
+2024/02/13 00:05:12 6 Start send heartbeats
+2024/02/13 00:05:12 6 Send heartbeat to 5
+2024/02/13 00:05:12 6 Send heartbeat to 3
+2024/02/13 00:05:12 6 Send heartbeat to 2
+2024/02/13 00:05:12 6 Send heartbeat to 4
+2024/02/13 00:05:12 6 Send heartbeat to 1
+2024/02/13 00:05:12 6 Send heartbeat to 0
+2024/02/13 00:05:12 1 Recv vote error. retry
+2024/02/13 00:05:12 2 Recv vote error. retry
+2024/02/13 00:05:12 0 Start send heartbeats
+2024/02/13 00:05:12 0 Send heartbeat to 6
+2024/02/13 00:05:12 0 Send heartbeat to 3
+2024/02/13 00:05:12 0 Send heartbeat to 4
+2024/02/13 00:05:12 0 Send heartbeat to 1
+2024/02/13 00:05:12 0 Send heartbeat to 5
+2024/02/13 00:05:12 0 Send heartbeat to 2
+2024/02/13 00:05:12 2 Recv vote error. retry
+2024/02/13 00:05:12 1 Start send heartbeats
+2024/02/13 00:05:12 1 Send heartbeat to 6
+2024/02/13 00:05:12 1 Send heartbeat to 3
+2024/02/13 00:05:12 1 Send heartbeat to 4
+2024/02/13 00:05:12 1 Send heartbeat to 5
+2024/02/13 00:05:12 3 receive heartbeat term 8 from 1
+2024/02/13 00:05:12 1 Send heartbeat to 2
+2024/02/13 00:05:12 1 Send heartbeat to 0
+2024/02/13 00:05:12 5 receive heartbeat term 8 from 1
+2024/02/13 00:05:12 2 receive heartbeat term 8 from 1
+2024/02/13 00:05:12 1 Recv vote error. retry
+2024/02/13 00:05:12 6 Start send heartbeats
+2024/02/13 00:05:12 6 Send heartbeat to 5
+2024/02/13 00:05:12 6 Send heartbeat to 2
+2024/02/13 00:05:12 6 Send heartbeat to 3
+2024/02/13 00:05:12 6 Send heartbeat to 0
+2024/02/13 00:05:12 6 Send heartbeat to 4
+2024/02/13 00:05:12 6 Send heartbeat to 1
+2024/02/13 00:05:12 1 Recv vote error. retry
+2024/02/13 00:05:12 6 Recv vote error. retry
+2024/02/13 00:05:12 4 Found timeout, become candidate.
+2024/02/13 00:05:12 4 Send request vote to 0
+2024/02/13 00:05:12 4 Send request vote to 1
+2024/02/13 00:05:12 4 Send request vote to 2
+2024/02/13 00:05:12 4 Send request vote to 5
+2024/02/13 00:05:12 4 Send request vote to 3
+2024/02/13 00:05:12 4 Sleep 452 miliseconds?
+2024/02/13 00:05:12 4 Send request vote to 6
+2024/02/13 00:05:12 0 Start send heartbeats
+2024/02/13 00:05:12 0 Send heartbeat to 6
+2024/02/13 00:05:12 0 Send heartbeat to 3
+2024/02/13 00:05:12 0 Send heartbeat to 2
+2024/02/13 00:05:12 0 Send heartbeat to 5
+2024/02/13 00:05:12 0 Send heartbeat to 1
+2024/02/13 00:05:12 0 Send heartbeat to 4
+2024/02/13 00:05:12 6 Recv vote error. retry
+2024/02/13 00:05:12 0 Sleep 574 miliseconds?
+2024/02/13 00:05:12 3 Recv vote error. retry
+2024/02/13 00:05:12 2 Recv vote error. retry
+2024/02/13 00:05:12 4 Recv vote error. retry
+2024/02/13 00:05:12 5 Sleep 348 miliseconds?
+2024/02/13 00:05:12 1 Start send heartbeats
+2024/02/13 00:05:12 1 Send heartbeat to 3
+2024/02/13 00:05:12 1 Send heartbeat to 2
+2024/02/13 00:05:12 1 Send heartbeat to 6
+2024/02/13 00:05:12 1 Send heartbeat to 4
+2024/02/13 00:05:12 1 Send heartbeat to 5
+2024/02/13 00:05:12 6 receive heartbeat term 8 from 1
+2024/02/13 00:05:12 4 receive heartbeat term 8 from 1
+2024/02/13 00:05:12 4 Candidate Update term to 8
+2024/02/13 00:05:12 5 receive heartbeat term 8 from 1
+2024/02/13 00:05:12 3 receive heartbeat term 8 from 1
+2024/02/13 00:05:12 1 Send heartbeat to 0
+2024/02/13 00:05:12 1 Sleep 495 miliseconds?
+2024/02/13 00:05:12 6 Start send heartbeats
+2024/02/13 00:05:12 6 Send heartbeat to 4
+2024/02/13 00:05:12 6 Send heartbeat to 5
+2024/02/13 00:05:12 6 Send heartbeat to 1
+2024/02/13 00:05:12 4 receive heartbeat term 7 from 6
+2024/02/13 00:05:12 1 receive heartbeat term 7 from 6
+2024/02/13 00:05:12 6 Send heartbeat to 0
+2024/02/13 00:05:12 6 Send heartbeat to 2
+2024/02/13 00:05:12 6 Send heartbeat to 3
+2024/02/13 00:05:12 6 Update term to 7
+2024/02/13 00:05:12 5 receive heartbeat term 7 from 6
+2024/02/13 00:05:12 3 receive heartbeat term 7 from 6
+2024/02/13 00:05:12 6 Sleep 434 miliseconds?
+2024/02/13 00:05:12 0 Start send heartbeats
+2024/02/13 00:05:12 0 Send heartbeat to 6
+2024/02/13 00:05:12 0 Send heartbeat to 3
+2024/02/13 00:05:12 0 Send heartbeat to 4
+2024/02/13 00:05:12 0 Send heartbeat to 5
+2024/02/13 00:05:12 0 Send heartbeat to 1
+2024/02/13 00:05:12 0 Send heartbeat to 2
+2024/02/13 00:05:12 6 Recv vote error. retry
+2024/02/13 00:05:12 2 Sleep 294 miliseconds?
+2024/02/13 00:05:12 3 Sleep 456 miliseconds?
+2024/02/13 00:05:12 1 Start send heartbeats
+2024/02/13 00:05:12 1 Send heartbeat to 6
+2024/02/13 00:05:12 1 Send heartbeat to 3
+2024/02/13 00:05:12 1 Send heartbeat to 2
+2024/02/13 00:05:12 1 Send heartbeat to 4
+2024/02/13 00:05:12 6 receive heartbeat term 8 from 1
+2024/02/13 00:05:12 1 Send heartbeat to 5
+2024/02/13 00:05:12 4 receive heartbeat term 8 from 1
+2024/02/13 00:05:12 3 receive heartbeat term 8 from 1
+2024/02/13 00:05:12 1 Send heartbeat to 0
+2024/02/13 00:05:12 5 receive heartbeat term 8 from 1
+2024/02/13 00:05:12 6 Exit send heartbeat goroutine
+2024/02/13 00:05:12 6 Recv vote error. retry
+2024/02/13 00:05:12 0 Start send heartbeats
+2024/02/13 00:05:12 0 Send heartbeat to 6
+2024/02/13 00:05:12 0 Send heartbeat to 3
+2024/02/13 00:05:12 0 Send heartbeat to 4
+2024/02/13 00:05:12 0 Send heartbeat to 1
+2024/02/13 00:05:12 0 Send heartbeat to 2
+2024/02/13 00:05:12 0 Send heartbeat to 5
+2024/02/13 00:05:12 1 Start send heartbeats
+2024/02/13 00:05:12 1 Send heartbeat to 6
+2024/02/13 00:05:12 1 Send heartbeat to 3
+2024/02/13 00:05:12 6 receive heartbeat term 8 from 1
+2024/02/13 00:05:12 3 receive heartbeat term 8 from 1
+2024/02/13 00:05:12 1 Send heartbeat to 2
+2024/02/13 00:05:12 1 Send heartbeat to 4
+2024/02/13 00:05:12 1 Send heartbeat to 5
+2024/02/13 00:05:12 4 receive heartbeat term 8 from 1
+2024/02/13 00:05:12 1 Send heartbeat to 0
+2024/02/13 00:05:12 5 receive heartbeat term 8 from 1
+2024/02/13 00:05:12 2 Recv vote error. retry
+2024/02/13 00:05:13 4 Sleep 438 miliseconds?
+2024/02/13 00:05:13 5 Sleep 420 miliseconds?
+2024/02/13 00:05:13 0 Start send heartbeats
+2024/02/13 00:05:13 0 Send heartbeat to 1
+2024/02/13 00:05:13 0 Send heartbeat to 3
+2024/02/13 00:05:13 0 Send heartbeat to 4
+2024/02/13 00:05:13 0 Send heartbeat to 5
+2024/02/13 00:05:13 0 Send heartbeat to 2
+2024/02/13 00:05:13 0 Send heartbeat to 6
+2024/02/13 00:05:13 2 Found timeout, become candidate.
+2024/02/13 00:05:13 2 Send request vote to 0
+2024/02/13 00:05:13 2 Sleep 591 miliseconds?
+2024/02/13 00:05:13 2 Send request vote to 6
+2024/02/13 00:05:13 2 Send request vote to 4
+2024/02/13 00:05:13 2 Send request vote to 1
+2024/02/13 00:05:13 2 Send request vote to 3
+2024/02/13 00:05:13 2 Send request vote to 5
+2024/02/13 00:05:13 1 Start send heartbeats
+2024/02/13 00:05:13 4 Recv vote error. retry
+2024/02/13 00:05:13 1 Send heartbeat to 6
+2024/02/13 00:05:13 1 Send heartbeat to 3
+2024/02/13 00:05:13 1 Send heartbeat to 4
+2024/02/13 00:05:13 1 Send heartbeat to 0
+2024/02/13 00:05:13 4 receive heartbeat term 8 from 1
+2024/02/13 00:05:13 1 Send heartbeat to 2
+2024/02/13 00:05:13 6 receive heartbeat term 8 from 1
+2024/02/13 00:05:13 2 receive heartbeat term 8 from 1
+2024/02/13 00:05:13 0 receive heartbeat term 8 from 1
+2024/02/13 00:05:13 1 Update term to 8
+2024/02/13 00:05:13 1 Send heartbeat to 5
+2024/02/13 00:05:13 6 Sleep 572 miliseconds?
+2024/02/13 00:05:13 1 Sleep 73 miliseconds?
+2024/02/13 00:05:13 0 Start send heartbeats
+2024/02/13 00:05:13 0 Send heartbeat to 6
+2024/02/13 00:05:13 0 Send heartbeat to 3
+2024/02/13 00:05:13 0 Send heartbeat to 4
+2024/02/13 00:05:13 0 Send heartbeat to 2
+2024/02/13 00:05:13 6 receive heartbeat term 2 from 0
+2024/02/13 00:05:13 0 Send heartbeat to 5
+2024/02/13 00:05:13 2 receive heartbeat term 2 from 0
+2024/02/13 00:05:13 4 receive heartbeat term 2 from 0
+2024/02/13 00:05:13 0 Update term to 2
+2024/02/13 00:05:13 0 Send heartbeat to 1
+2024/02/13 00:05:13 0 Update term to 8
+2024/02/13 00:05:13 1 receive heartbeat term 2 from 0
+2024/02/13 00:05:13 0 Sleep 392 miliseconds?
+2024/02/13 00:05:13 2 Recv vote error. retry
+2024/02/13 00:05:13 1 Sleep 488 miliseconds?
+2024/02/13 00:05:13 3 Sleep 173 miliseconds?
+2024/02/13 00:05:13 1 Exit send heartbeat goroutine
+2024/02/13 00:05:13 1 Recv vote error. retry
+2024/02/13 00:05:13 6 Recv vote error. retry
+2024/02/13 00:05:13 0 Exit send heartbeat goroutine
+2024/02/13 00:05:13 6 Recv vote error. retry
+2024/02/13 00:05:13 3 Recv vote error. retry
+2024/02/13 00:05:13 3 Found timeout, become candidate.
+2024/02/13 00:05:13 3 Sleep 507 miliseconds?
+2024/02/13 00:05:13 3 Send request vote to 5
+2024/02/13 00:05:13 3 Send request vote to 6
+2024/02/13 00:05:13 3 Send request vote to 1
+2024/02/13 00:05:13 3 Send request vote to 0
+2024/02/13 00:05:13 3 Send request vote to 4
+2024/02/13 00:05:13 3 Send request vote to 2
+2024/02/13 00:05:13 5 Found timeout, become candidate.
+2024/02/13 00:05:13 5 Sleep 538 miliseconds?
+2024/02/13 00:05:13 5 Send request vote to 2
+2024/02/13 00:05:13 5 Send request vote to 4
+2024/02/13 00:05:13 5 Send request vote to 6
+2024/02/13 00:05:13 5 Send request vote to 0
+2024/02/13 00:05:13 5 Send request vote to 1
+2024/02/13 00:05:13 5 Send request vote to 3
+2024/02/13 00:05:13 2 Recv vote error. retry
+2024/02/13 00:05:13 2 Recv vote error. retry
+2024/02/13 00:05:13 4 Sleep 275 miliseconds?
+2024/02/13 00:05:13 3 Recv vote error. retry
+2024/02/13 00:05:13 3 Recv vote error. retry
+2024/02/13 00:05:13 0 Found timeout, become candidate.
+2024/02/13 00:05:13 0 Sleep 514 miliseconds?
+2024/02/13 00:05:13 0 Send request vote to 3
+2024/02/13 00:05:13 0 Send request vote to 6
+2024/02/13 00:05:13 0 Send request vote to 1
+2024/02/13 00:05:13 3 Recv vote error. retry
+2024/02/13 00:05:13 0 Send request vote to 2
+2024/02/13 00:05:13 0 Send request vote to 5
+2024/02/13 00:05:13 0 Send request vote to 4
+2024/02/13 00:05:13 4 receive requestvote from 0
+2024/02/13 00:05:13 4 Update term to 8
+2024/02/13 00:05:13 6 receive requestvote from 0
+2024/02/13 00:05:13 6 Update term to 8
+2024/02/13 00:05:13 1 receive requestvote from 0
+2024/02/13 00:05:13 1 Update term to 9
+2024/02/13 00:05:13 2 receive requestvote from 0
+2024/02/13 00:05:13 0 Recv vote reply from 6. be voted
+2024/02/13 00:05:13 0 Recv vote reply from 4. be voted
+2024/02/13 00:05:13 2 Update term to 9
+2024/02/13 00:05:13 0 Recv vote reply from 1. be voted
+2024/02/13 00:05:13 0 Start send heartbeat goroutine
+2024/02/13 00:05:13 0 Start send heartbeats
+2024/02/13 00:05:13 0 Send heartbeat to 6
+2024/02/13 00:05:13 0 Recv vote reply from 2. be voted
+2024/02/13 00:05:13 0 Send heartbeat to 3
+2024/02/13 00:05:13 0 Send heartbeat to 1
+2024/02/13 00:05:13 0 Send heartbeat to 2
+2024/02/13 00:05:13 1 receive heartbeat term 10 from 0
+2024/02/13 00:05:13 0 Send heartbeat to 5
+2024/02/13 00:05:13 0 Send heartbeat to 4
+2024/02/13 00:05:13 6 receive heartbeat term 10 from 0
+2024/02/13 00:05:13 4 receive heartbeat term 10 from 0
+2024/02/13 00:05:13 2 receive heartbeat term 10 from 0
+2024/02/13 00:05:13 2 Sleep 427 miliseconds?
+2024/02/13 00:05:13 6 Sleep 460 miliseconds?
+2024/02/13 00:05:13 3 Recv vote error. retry
+2024/02/13 00:05:13 4 Sleep 471 miliseconds?
+2024/02/13 00:05:13 1 Sleep 442 miliseconds?
+2024/02/13 00:05:13 4 Recv vote error. retry
+2024/02/13 00:05:13 0 Start send heartbeats
+2024/02/13 00:05:13 0 Send heartbeat to 6
+2024/02/13 00:05:13 0 Send heartbeat to 3
+2024/02/13 00:05:13 0 Send heartbeat to 1
+2024/02/13 00:05:13 0 Send heartbeat to 2
+2024/02/13 00:05:13 0 Send heartbeat to 4
+2024/02/13 00:05:13 0 Send heartbeat to 5
+2024/02/13 00:05:13 1 receive heartbeat term 10 from 0
+2024/02/13 00:05:13 6 receive heartbeat term 10 from 0
+2024/02/13 00:05:13 2 receive heartbeat term 10 from 0
+2024/02/13 00:05:13 4 receive heartbeat term 10 from 0
+2024/02/13 00:05:13 6 Recv vote error. retry
+2024/02/13 00:05:13 0 Recv vote error. retry
+2024/02/13 00:05:13 0 Start send heartbeats
+2024/02/13 00:05:13 0 Send heartbeat to 6
+2024/02/13 00:05:13 0 Send heartbeat to 3
+2024/02/13 00:05:13 0 Send heartbeat to 1
+2024/02/13 00:05:13 6 receive heartbeat term 10 from 0
+2024/02/13 00:05:13 1 receive heartbeat term 10 from 0
+2024/02/13 00:05:13 0 Send heartbeat to 4
+2024/02/13 00:05:13 0 Send heartbeat to 2
+2024/02/13 00:05:13 0 Send heartbeat to 5
+2024/02/13 00:05:13 4 receive heartbeat term 10 from 0
+2024/02/13 00:05:13 2 receive heartbeat term 10 from 0
+2024/02/13 00:05:13 3 Found timeout, become candidate.
+2024/02/13 00:05:13 3 Sleep 572 miliseconds?
+2024/02/13 00:05:13 3 Send request vote to 0
+2024/02/13 00:05:13 3 Send request vote to 4
+2024/02/13 00:05:13 3 Send request vote to 5
+2024/02/13 00:05:13 3 Send request vote to 1
+2024/02/13 00:05:13 3 Send request vote to 2
+2024/02/13 00:05:13 3 Send request vote to 6
+2024/02/13 00:05:13 5 Found timeout, become candidate.
+2024/02/13 00:05:13 5 Sleep 556 miliseconds?
+2024/02/13 00:05:13 5 Send request vote to 3
+2024/02/13 00:05:13 5 Send request vote to 0
+2024/02/13 00:05:13 5 Send request vote to 4
+2024/02/13 00:05:13 5 Send request vote to 1
+2024/02/13 00:05:13 5 Send request vote to 6
+2024/02/13 00:05:13 5 Send request vote to 2
+2024/02/13 00:05:14 4 Recv vote error. retry
+2024/02/13 00:05:14 0 Start send heartbeats
+2024/02/13 00:05:14 0 Send heartbeat to 6
+2024/02/13 00:05:14 0 Send heartbeat to 1
+2024/02/13 00:05:14 0 Send heartbeat to 2
+2024/02/13 00:05:14 0 Send heartbeat to 4
+2024/02/13 00:05:14 6 receive heartbeat term 10 from 0
+2024/02/13 00:05:14 1 receive heartbeat term 10 from 0
+2024/02/13 00:05:14 4 receive heartbeat term 10 from 0
+2024/02/13 00:05:14 2 receive heartbeat term 10 from 0
+2024/02/13 00:05:14 0 Send heartbeat to 5
+2024/02/13 00:05:14 0 Send heartbeat to 3
+2024/02/13 00:05:14 2 Recv vote error. retry
+2024/02/13 00:05:14 6 Recv vote error. retry
+2024/02/13 00:05:14 2 Sleep 522 miliseconds?
+2024/02/13 00:05:14 0 Sleep 474 miliseconds?
+2024/02/13 00:05:14 6 Sleep 398 miliseconds?
+2024/02/13 00:05:14 6 Recv vote error. retry
+2024/02/13 00:05:14 1 Sleep 429 miliseconds?
+2024/02/13 00:05:14 4 Sleep 362 miliseconds?
+2024/02/13 00:05:14 0 Start send heartbeats
+2024/02/13 00:05:14 0 Send heartbeat to 6
+2024/02/13 00:05:14 0 Send heartbeat to 3
+2024/02/13 00:05:14 0 Send heartbeat to 1
+2024/02/13 00:05:14 0 Send heartbeat to 2
+2024/02/13 00:05:14 0 Send heartbeat to 4
+2024/02/13 00:05:14 0 Send heartbeat to 5
+2024/02/13 00:05:14 2 receive heartbeat term 10 from 0
+2024/02/13 00:05:14 6 receive heartbeat term 10 from 0
+2024/02/13 00:05:14 4 receive heartbeat term 10 from 0
+2024/02/13 00:05:14 5 receive heartbeat term 10 from 0
+2024/02/13 00:05:14 5 Candidate Update term to 10
+2024/02/13 00:05:14 1 receive heartbeat term 10 from 0
+2024/02/13 00:05:14 3 receive heartbeat term 10 from 0
+2024/02/13 00:05:14 3 Candidate Update term to 10
+2024/02/13 00:05:14 5 Recv vote error. retry
+2024/02/13 00:05:14 0 Start send heartbeats
+2024/02/13 00:05:14 0 Send heartbeat to 6
+2024/02/13 00:05:14 0 Send heartbeat to 3
+2024/02/13 00:05:14 0 Send heartbeat to 4
+2024/02/13 00:05:14 0 Send heartbeat to 5
+2024/02/13 00:05:14 0 Send heartbeat to 1
+2024/02/13 00:05:14 0 Send heartbeat to 2
+2024/02/13 00:05:14 4 receive heartbeat term 10 from 0
+2024/02/13 00:05:14 5 receive heartbeat term 10 from 0
+2024/02/13 00:05:14 1 receive heartbeat term 10 from 0
+2024/02/13 00:05:14 3 receive heartbeat term 10 from 0
+2024/02/13 00:05:14 2 receive heartbeat term 10 from 0
+2024/02/13 00:05:14 6 receive heartbeat term 10 from 0
+2024/02/13 00:05:14 5 Recv vote error. retry
+2024/02/13 00:05:14 6 Recv vote error. retry
+2024/02/13 00:05:14 3 Sleep 338 miliseconds?
+2024/02/13 00:05:14 0 Start send heartbeats
+2024/02/13 00:05:14 0 Send heartbeat to 1
+2024/02/13 00:05:14 0 Send heartbeat to 6
+2024/02/13 00:05:14 0 Send heartbeat to 3
+2024/02/13 00:05:14 0 Send heartbeat to 4
+2024/02/13 00:05:14 6 receive heartbeat term 10 from 0
+2024/02/13 00:05:14 1 receive heartbeat term 10 from 0
+2024/02/13 00:05:14 0 Send heartbeat to 5
+2024/02/13 00:05:14 4 receive heartbeat term 10 from 0
+2024/02/13 00:05:14 0 Send heartbeat to 2
+2024/02/13 00:05:14 3 receive heartbeat term 10 from 0
+2024/02/13 00:05:14 2 receive heartbeat term 10 from 0
+2024/02/13 00:05:14 5 receive heartbeat term 10 from 0
+2024/02/13 00:05:14 5 Sleep 552 miliseconds?
+2024/02/13 00:05:14 6 Sleep 522 miliseconds?
+2024/02/13 00:05:14 4 Sleep 408 miliseconds?
+2024/02/13 00:05:14 5 Recv vote error. retry
+2024/02/13 00:05:14 1 Sleep 446 miliseconds?
+2024/02/13 00:05:14 0 Sleep 458 miliseconds?
+2024/02/13 00:05:14 2 Sleep 399 miliseconds?
+  ... Passed --   6.5  7  558   49106    0
+PASS
+ok  	6.5840/raft	15.014s
