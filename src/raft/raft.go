@@ -167,9 +167,9 @@ func (rf *Raft) RequestVote(args *RequestVoteArgs, reply *RequestVoteReply) {
 	// Your code here (2A, 2B).
 
 	// 1. Check valid
-	reply.Term = rf.currentTerm
-	reply.VoteGranted = false
 	rf.Sync(func() {
+		reply.Term = rf.currentTerm
+		reply.VoteGranted = false
 		DPrintf("%d receive requestvote from %d", rf.me, args.CandidateId)
 
 		if args.Term < rf.currentTerm {
@@ -389,8 +389,6 @@ func (rf *Raft) ticker() {
 
 					i := i
 					go func() {
-						// TODO: Think struct
-						// for {
 
 						args := RequestVoteArgs{
 							currentTerm,
@@ -467,7 +465,10 @@ func (rf *Raft) ticker() {
 		})
 
 		// Start Pause
-		passed := rf.hasPassed()
+		var passed time.Duration
+		rf.Sync(func() {
+			passed = rf.hasPassed()
+		})
 		// pause for a random amount of time between 450 and 600
 		// milliseconds.
 		// ms := 50 + (rand.Int63() % 300)
@@ -487,7 +488,11 @@ func (rf *Raft) sendHeartBeats() {
 		}
 		reply := AppendEntriesReply{}
 		go func(i int) {
-			rf.sendHeartBeatsRPC(i, &AppendEntriesArgs{rf.currentTerm, rf.me}, &reply)
+			var term int
+			rf.Sync(func() {
+				term = rf.currentTerm
+			})
+			rf.sendHeartBeatsRPC(i, &AppendEntriesArgs{term, rf.me}, &reply)
 			rf.Sync(func() {
 				rf.UpdateTerm(reply.Term)
 			})
